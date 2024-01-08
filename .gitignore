@@ -1,2 +1,5 @@
 .DS_Store
 .vscode
+/quixo/policies
+policy_first
+quixo/policy_first_50k_decreasing_exp_rate

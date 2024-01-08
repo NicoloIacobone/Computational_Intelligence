@@ -2,9 +2,9 @@ from abc import ABC, abstractmethod
 from copy import deepcopy
 from enum import Enum
 import numpy as np
+import random
 
 # Rules on PDF
-
 
 class Move(Enum):
     '''
@@ -37,6 +37,9 @@ class Game(object):
     def __init__(self) -> None:
         self._board = np.ones((5, 5), dtype=np.uint8) * -1
         self.current_player_idx = 1
+        self.trajectory = list()
+        self.winner = -1
+        self.available_moves = list()
 
     def get_board(self) -> np.ndarray:
         '''
@@ -97,19 +100,48 @@ class Game(object):
 
     def play(self, player1: Player, player2: Player) -> int:
         '''Play the game. Returns the winning player'''
+        # print("1")
         players = [player1, player2]
+        # print("2")
         winner = -1
+        # print("3")
         while winner < 0:
+            # print("4")
             self.current_player_idx += 1
+            # print("5")
             self.current_player_idx %= len(players)
+            # print("6")
             ok = False
+            # print("7")
             while not ok:
-                from_pos, slide = players[self.current_player_idx].make_move(
-                    self)
+                # print("8")
+                from_pos, slide = players[self.current_player_idx].make_move(self)
+                # print("index: ", self.current_player_idx)
+                # print("from_pos: ", from_pos)
+                # print("slide: ", slide)
+                # print("9")
                 ok = self.__move(from_pos, slide, self.current_player_idx)
             
-            self.print()
+            # print("10")
+            # hashable_state = tuple(map(tuple, self._board))
+            # hashable_state = tuple(self._board.flatten())
+            hashable_state = np.array2string(self._board.flatten(), separator='')
+            # print("11")
+            self.trajectory.append(hashable_state)
+            # print("12")
+
+            # print di debug
+            # print("Player: ", self.current_player_idx)
+            # print("Available moves:")
+            # av_moves = self.get_available_moves()
+            # print(av_moves)
+            # print("move: ", from_pos, " ", slide)
+            # self.print()
             winner = self.check_winner()
+            # print("13")
+            self.winner = winner
+            # print("14")
+            # raise Exception
         return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
@@ -124,9 +156,13 @@ class Game(object):
             if not acceptable:
                 self._board[(from_pos[1], from_pos[0])] = deepcopy(prev_value)
         return acceptable
+    
+    def make_single_move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
+        return self.__move(from_pos, slide, player_id)
 
-    def __take(self, from_pos: tuple[int, int], player_id: int) -> bool:
+    def __take(self, from_pos: tuple[int, int], player_id: int, make_move: bool = True) -> bool:
         '''Take piece'''
+        # print("Taking ", from_pos, " ", player_id, " ", make_move)
         # acceptable only if in border
         acceptable: bool = (
             # check if it is in the first row
@@ -139,11 +175,12 @@ class Game(object):
             or (from_pos[1] == 4 and from_pos[0] < 5)
             # and check if the piece can be moved by the current player
         ) and (self._board[from_pos] < 0 or self._board[from_pos] == player_id)
-        if acceptable:
+        if acceptable and make_move:
             self._board[from_pos] = player_id
+        # print("Acceptable: ", acceptable)
         return acceptable
 
-    def __slide(self, from_pos: tuple[int, int], slide: Move) -> bool:
+    def __slide(self, from_pos: tuple[int, int], slide: Move, make_move: bool = True) -> bool:
         '''Slide the other pieces'''
         # define the corners
         SIDES = [(0, 0), (0, 4), (4, 0), (4, 4)]
@@ -182,7 +219,7 @@ class Game(object):
         # check if the move is acceptable
         acceptable: bool = acceptable_top or acceptable_bottom or acceptable_left or acceptable_right
         # if it is
-        if acceptable:
+        if acceptable and make_move:
             # take the piece
             piece = self._board[from_pos]
             # if the player wants to slide it to the left
@@ -222,3 +259,77 @@ class Game(object):
                 # move the piece down
                 self._board[(self._board.shape[0] - 1, from_pos[1])] = piece
         return acceptable
+    
+    # def get_available_moves(self):
+    #     '''Returns a list of available moves for the player'''
+    #     available_moves = []
+        
+    #     # TODO: migliorare efficienza senza chiamare ogni volta tutte le funzioni di take e slide, basta accertarsi numericamente che siano gli elementi del bordo esterno
+    #     # for each row
+    #     for row in range(5):
+    #         # for each column
+    #         for col in range(5):
+    #             # for each possible move
+    #             for move in Move:
+    #                 from_pos = (row, col)
+    #                 # check if the piece can be taken
+    #                 # print("Checking ", from_pos, " ", move)
+    #                 # acceptable = self.__take((from_pos[1], from_pos[0]), player_id, False)
+    #                 acceptable = self.__take((from_pos[1], from_pos[0]), self.current_player_idx, False)
+    #                 if acceptable:
+    #                     # check if the pieces can be moved after the piece is taken
+    #                     acceptable = self.__slide(from_pos, move, False)
+    #                     if acceptable:
+    #                         # print("move accepted")
+    #                         available_moves.append((from_pos, move))
+    #                     # self._board[from_pos] = -1
+                            
+    #     return available_moves
+
+    # def get_available_moves_old(self):
+    #     '''Returns a list of available moves for the player'''
+    #     available_moves = []
+        
+    #     # TODO: migliorare efficienza senza chiamare ogni volta tutte le funzioni di take e slide, basta accertarsi numericamente che siano gli elementi del bordo esterno
+    #     # for each row
+    #     for row in range(5):
+    #         # for each column
+    #         for col in range(5):
+    #             # for each possible move
+    #             for move in Move:
+    #                 from_pos = (row, col)
+    #                 new_state = deepcopy(self)
+    #                 if new_state.move(from_pos, move, new_state.current_player_idx):
+    #                     available_moves.append((from_pos, move))
+                            
+    #     return available_moves
+
+    def __available_moves(self):
+        ''' Compute all possible moves in this state '''
+        self.available_moves = []
+        old_board = deepcopy(self._board)
+
+        for row in range(5):
+            for col in range(5):
+                if row == 0 or row == 4 or col == 0 or col == 4:
+                    for move in Move:
+                        possible_move = self.__move((row, col), move, self.current_player_idx)
+                        self._board = deepcopy(old_board)
+                        if possible_move:
+                            self.available_moves.append(((row, col), move))
+
+    def get_available_moves(self):
+        '''Returns a list of available moves for the player'''
+        self.__available_moves()
+        return self.available_moves
+            
+
+
+
+''''
+X  X  X  X  X  -->  row 0, col 0-4
+X           X  -->  row 1, col 0,4
+X           X  -->  row 2, col 0,4
+X           X  -->  row 3, col 0,4
+X  X  X  X  X  -->  row 4, col 0-4
+'''
