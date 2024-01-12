@@ -63,6 +63,13 @@ class ReinforcementPlayer(Player):
                 # hashable_state = tuple(new_state._board.flatten())
                 hashable_state = np.array2string(new_state._board.flatten(), separator = '')
                 actual_move_score = self.value_dictionary[hashable_state]
+
+                # to solve the problem of unseen states that are added to the dictionary with a value of 0 while
+                # looking for the best move, if actual_move_score is 0 it means that the state was never visited, in this case
+                # we remove the state from the dictionary
+                if actual_move_score == 0:
+                    del self.value_dictionary[hashable_state]
+
                 if actual_move_score > best_move_score:
                     best_move_score = actual_move_score
                     best_move = move
@@ -86,21 +93,19 @@ class ReinforcementPlayer(Player):
         self.random_move = random_move
 
     # creates the policy file where it is stored the value of each state
-    def create_policy(self):
+    def create_policy(self, policy_file):
         """Creates the policy file"""
         # fw = open('policy_' + str(self.player_index), 'wb')
-        fw = open('policy_first', 'wb')
+        fw = open(policy_file, 'wb')
         pickle.dump(self.value_dictionary, fw)
         fw.close()
 
     # loads the policy file
-    def load_policy(self):
+    def load_policy(self, policy_file):
         """Loads the policy file"""
-        fr = open('policy_first', 'rb')
+        fr = open(policy_file, 'rb')
         self.value_dictionary = pickle.load(fr)
         fr.close()
-
-    
 
 
 if __name__ == '__main__':

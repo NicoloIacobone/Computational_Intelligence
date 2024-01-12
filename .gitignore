@@ -3,3 +3,5 @@
 /quixo/policies
 policy_first
 quixo/policy_first_50k_decreasing_exp_rate
+quixo/policy_first_200k_player1_decreasing_from_05_to_01
+quixo/policy_first_200k_player1_decreasing_from_05_to_01.txt
