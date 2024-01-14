@@ -198,3 +198,7 @@ Inoltre il numero di entries è ancora troppo grande e non riesco a capire da co
 Prossimi miglioramenti:
 - Implementare un controllo delle simmetrie (come in TicTacToe)
 - Implementare un controllo sugli stati già visitati durante la partita per evitare loop infiniti
+- test facendo giocare due RL players uno contro l'altro con e senza diminuzione di exp_rate
+- dare un reward inversamente proporzionale a exp_rate
+- dare un reward basato sul numero di step utilizzati per vincere
+- Dare un reward negativo per ogni step fatto al singolo stato e poi dare un reward più grande positivo o negativo in caso di vittoria o sconfitta che viene backpropagato 

@@ -33,7 +33,6 @@ class ReinforcementPlayer(Player):
         self.value_dictionary = defaultdict(float) # state of the game and its value
         self.hit_state = defaultdict(int) # state of the game and how many times it was visited during the training phase
         self.epsilon = 0.1 # learning rate
-        # self.player_index = player_index # index of the player (1 or 2)
         self.random_move = random_move # a value between 0 and 1, used to choose a random move when training
 
     def make_move(self, game: 'Game') -> tuple[tuple[int, int], Move]:
@@ -41,26 +40,13 @@ class ReinforcementPlayer(Player):
         best_move = None
         available_moves = game.get_available_moves()
 
-        # for move in available_moves:
-        #     from_pos, slide = move
-        #     new_state = deepcopy(game)
-        #     print(new_state.move(from_pos, slide, new_state.current_player_idx))
-        #     # print(from_pos, slide)
-
-        # raise Exception("Not implemented")
-        # print("available moves: ", available_moves)
         if random.random() < self.random_move:
-            # print("random")
             best_move = random.choice(available_moves)
         else:
-            # print("not random")
             for move in available_moves:
                 new_state = deepcopy(game)
                 from_pos, slide = move
                 new_state.make_single_move(from_pos, slide, new_state.current_player_idx)
-                # hashable_state = (frozenset(new_state._board))
-                # hashable_state = tuple(map(tuple, new_state._board))
-                # hashable_state = tuple(new_state._board.flatten())
                 hashable_state = np.array2string(new_state._board.flatten(), separator = '')
                 actual_move_score = self.value_dictionary[hashable_state]
 
@@ -73,17 +59,13 @@ class ReinforcementPlayer(Player):
                 if actual_move_score > best_move_score:
                     best_move_score = actual_move_score
                     best_move = move
-        #     move = max(available_moves, key = lambda x: self.value_dictionary[game.get_next_state(x)])
-        # move = random.choice(available_moves)
+
         from_pos, slide = best_move
         return from_pos, slide
     
     def give_reward(self, reward, trajectory):
         for state in reversed(trajectory):
-            # print(state)
-            # hashable_state = (frozenset(state))
-            # self.hit_state[hashable_state] += 1
-            self.value_dictionary[state] += self.epsilon * (reward - self.value_dictionary[state])
+            self.value_dictionary[state] += 0.2 * (0.9 * reward - self.value_dictionary[state])
             reward = self.value_dictionary[state]
 
     def print_reward(self):
