@@ -2,6 +2,7 @@ from game import Game, Move, Player
 from main import RandomPlayer, ReinforcementPlayer
 from tqdm import tqdm
 import matplotlib.pyplot as plt
+from math import ceil
 
 ''' In this class are defined some useful functions:
     Train, Test, Evaluate '''
@@ -18,7 +19,8 @@ class Utils:
               lose_reward: int = -1, 
               policy_name = "test_policy", 
               plot: bool = False, 
-              decreasing_exp_rate: bool = False) -> None:
+              decreasing_exp_rate: bool = False,
+              new_reward: bool = False) -> None:
         
         if plot:
             plot_variables = []
@@ -37,14 +39,18 @@ class Utils:
             win = game.play(player1, player2)
             if win == 0:
                 if isinstance(player1, ReinforcementPlayer):
-                    player1.give_reward(win_reward, game.trajectory)
+                    player1.give_reward(win_reward, game.trajectory_player_1)
+                    # player1.give_reward(win_reward - (ceil(len(game.trajectory_player_1) / 100)), game.trajectory_player_1)
                 if isinstance(player2, ReinforcementPlayer):
-                    player2.give_reward(lose_reward, game.trajectory)
+                    player2.give_reward(lose_reward - (ceil(len(game.trajectory_player_2) / 100)), game.trajectory_player_2)
             elif win == 1:
                 if isinstance(player1, ReinforcementPlayer):
-                    player1.give_reward(lose_reward, game.trajectory)
+                    if not new_reward:
+                        player1.give_reward(lose_reward, game.trajectory_player_1)
+                    else:
+                        player1.give_reward(lose_reward - (ceil(len(game.trajectory_player_1) / 100)), game.trajectory_player_1)
                 if isinstance(player2, ReinforcementPlayer):
-                    player2.give_reward(win_reward, game.trajectory)
+                    player2.give_reward(win_reward - (ceil(len(game.trajectory_player_2) / 100)), game.trajectory_player_2)
 
         if isinstance(player1, ReinforcementPlayer):
             player1.create_policy(policy_name + "_1")
@@ -91,7 +97,7 @@ class Utils:
                 lose_rate_player_1 += 1
             else:
                 draw_rate += 1
-            trajectory_size += len(game.trajectory)
+            trajectory_size += len(game.trajectory_player_1)
 
         if plot:
             if isinstance(player1, ReinforcementPlayer):

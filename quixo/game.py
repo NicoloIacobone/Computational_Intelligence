@@ -37,7 +37,9 @@ class Game(object):
     def __init__(self) -> None:
         self._board = np.ones((5, 5), dtype=np.uint8) * -1
         self.current_player_idx = 1
-        self.trajectory = list()
+        # self.trajectory = list()
+        self.trajectory_player_1 = list()
+        self.trajectory_player_2 = list()
         self.winner = -1
         self.available_moves = list()
 
@@ -119,6 +121,7 @@ class Game(object):
             self.current_player_idx += 1
             # print("5")
             self.current_player_idx %= len(players)
+            # print("Player: ", self.current_player_idx)
             # print("6")
             ok = False
             # print("7")
@@ -136,7 +139,12 @@ class Game(object):
             # hashable_state = tuple(self._board.flatten())
             hashable_state = np.array2string(self._board.flatten(), separator='')
             # print("11")
-            self.trajectory.append(hashable_state)
+            # self.trajectory.append(hashable_state)
+
+            if self.current_player_idx == 0:
+                self.trajectory_player_1.append(hashable_state)
+            else:
+                self.trajectory_player_2.append(hashable_state)
             # print("12")
 
             # print di debug

@@ -394,3 +394,87 @@ RISULTATI TEST:
 Osservazioni:
 - con exp_rate costante, all'aumentare dell'exp rate diminuisce la win rate
 - guardando i grafici dei training senza diminuzione dell'exp_rate, notiamo che, rispetto a quelli con diminuzione, la possibilità di crescita è più bassa, per questo ho deciso di continuare a trainare quelli con il decay exp_rate
+- il migliore è la versione con exp_rate = 0.5 decreasing
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Ho modificato la creazione della trajectory, ora ce ne sono due, una per player e trainando 1k RL vs Rand ottengo come previsto una diminuzione nella dimensione della policy del 50%:
+prima: 
+    1k round, RL vs Random:
+    Entries: 38591
+    Policy size: 2.47 MB
+
+dopo:
+    1k round, RL vs Random:
+    Entries: 19195
+    Policy size: 1.23 MB
+
+Inoltre è aumentata la velocità di esecuzione di circa 75%
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Adesso modifico leggermente i reward:
+
+Attuali: +1, -1
+Nuovi: 
+    1. +10 - (ceil(len(game.trajectory) / 100)), -10
+    2. +10 - (ceil(len(game.trajectory) / 100)), -10 - (ceil(len(game.trajectory) / 100))
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+RISULTATI TEST:
+
+1. RL vs Random, exp_rate = 0.5, decreasing, 100k round, reward_1:
+    Win rate player 1: 51.2%
+    Lose rate player 1: 47.5%
+    Draw rate: 1.3%
+    Average trajectory size: 16.212
+    ---------------------------------------------
+    Entries: 1605503
+    Policy size: 102.77 MB
+
+2. RL vs Random, exp_rate = 0.5, decreasing, 100k round, reward_2:
+    Win rate player 1: 50.5%
+    Lose rate player 1: 47.59%
+    Draw rate: 1.9%
+    Average trajectory size: 16.707
+    ---------------------------------------------
+    Entries: 1613740
+    Policy size: 103.29 MB
+
+- ridotte della mentà le entries
+- ridotta della metà la policy size
+- ridotta la metà l'average trajectory size
+- win rate diminuita (secondo me dipende dall'exp_rate, deve essere piccolissimo nelle fasi finali)
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Nuovo test con exp_rate_decay modificato:
+nei test precedenti in cui da 0.5 usavo la funzione di train con decay e ottenevo 70%, avevo applicato due volte di fila la funzione con decay su 50k round, quindi all'inizio del secondo train il valore iniziale era 0.17 che è il valore di arrivo se faccio un solo train da 100k round.
+
+1. RL vs Random, exp_rate = 0.5, decreasing, 50k + 50k round:
+    Win rate player 1: 55.2%
+    Lose rate player 1: 43.5%
+    Draw rate: 1.3%
+    Average trajectory size: 15.84
+    ---------------------------------------------
+    Entries: 1438277
+    Policy size: 92.06 MB
+
+2. RL vs Random, exp_rate = 0.5, decreasing, 25k + 25k + 25k + 25k round:
+    Win rate player 1: 54.2%
+    Lose rate player 1: 43.7%
+    Draw rate: 2.1%
+    Average trajectory size: 15.826
+    ---------------------------------------------
+    Entries: 1245868
+    Policy size: 79.75 MB
+
+Nessun miglioramento, anzi, va peggio.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Prossima modifica: 
+- modificare il RandomPlayer affinche non faccia mosse che causano la vittoria dell'avversario.
+- dare un reward infinito negativo se con la propria mossa si causa la vittoria dell'avversario in ReinfocementPlayer
+- dare un reward infinito positivo se con la propria mossa si causa la vittoria dell'avversario in ReinfocementPlayer
+- eliminazione dei loop nella funzione make_move del ReinforcementPlayer
