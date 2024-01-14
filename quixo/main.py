@@ -5,6 +5,7 @@ from copy import deepcopy
 from tqdm import tqdm
 import pickle
 import numpy as np
+import os
 
 
 class RandomPlayer(Player):
@@ -89,6 +90,11 @@ class ReinforcementPlayer(Player):
         self.value_dictionary = pickle.load(fr)
         fr.close()
 
+    # gets the policy size
+    def get_policy_size(self, policy_file):
+        """Gets the policy size"""
+        size = os.path.getsize(policy_file)
+        return size
 
 if __name__ == '__main__':
     # g = Game()

@@ -201,4 +201,196 @@ Prossimi miglioramenti:
 - test facendo giocare due RL players uno contro l'altro con e senza diminuzione di exp_rate
 - dare un reward inversamente proporzionale a exp_rate
 - dare un reward basato sul numero di step utilizzati per vincere
-- Dare un reward negativo per ogni step fatto al singolo stato e poi dare un reward più grande positivo o negativo in caso di vittoria o sconfitta che viene backpropagato 
+- Dare un reward negativo per ogni step fatto al singolo stato e poi dare un reward più grande positivo o negativo in caso di vittoria o sconfitta che viene backpropagato
+- dare un reward molto negativo se con la propria mossa si causa la vittoria dell'avversario
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Aggiunta classe utils che contiene funzione di train, test e evaluate.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+0 round, RL vs Random:
+Win rate player 1: 30.099999999999998%
+Lose rate player 1: 68.5%
+Draw rate: 1.4000000000000001%
+Average trajectory size: 37.941
+Entries: 0
+Policy size: 0.00 MB
+------------------------------------------------------------------
+
+1k round, RL vs Random:
+Win rate player 1: 23.3%
+Lose rate player 1: 74.2%
+Draw rate: 2.5%
+Average trajectory size: 43.698
+Entries: 38591
+Policy size: 2.47 MB
+------------------------------------------------------------------
+
+1k round, RL vs RL:
+Win rate player 1: 0.0%
+Lose rate player 1: 0.0%
+Draw rate: 100.0%
+Average trajectory size: 100.0
+Entries: 22890
+Policy size: 1.47 MB
+------------------------------------------------------------------
+
+1k round, RL vs Random, RL trained against RL:
+Win rate player 1: 16.3%
+Lose rate player 1: 80.4%
+Draw rate: 3.3000000000000003%
+Average trajectory size: 45.422
+Entries: 22890
+Policy size: 1.47 MB
+------------------------------------------------------------------
+
+1k round, RL vs Random, exp_rate = 0.5:
+Win rate player 1: 18.0%
+Lose rate player 1: 80.10000000000001%
+Draw rate: 1.9%
+Average trajectory size: 45.441
+Entries: 39300
+Policy size: 2.52 MB
+------------------------------------------------------------------
+
+1k round, RL vs Random, exp_rate = 0.7:
+Win rate player 1: 18.2%
+Lose rate player 1: 78.4%
+Draw rate: 3.4000000000000004%
+Average trajectory size: 44.849
+Entries: 41514
+Policy size: 2.66 MB
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Nuovi test con plot e con un numero maggiore di round di training (50k)
+
+1. RL vs Random, exp_rate = 0.3
+2. RL vs Random, exp_rate = 0.5
+3. RL vs Random, exp_rate = 0.7
+
+4. RL vs Random, exp_rate = 0.3, decreasing
+5. RL vs Random, exp_rate = 0.5, decreasing
+6. RL vs Random, exp_rate = 0.7, decreasing
+
+RL vs RL, exp_rate = 0.3
+RL vs RL, exp_rate = 0.5
+RL vs RL, exp_rate = 0.7
+
+RL vs RL, exp_rate = 0.3, decreasing
+RL vs RL, exp_rate = 0.5, decreasing
+RL vs RL, exp_rate = 0.7, decreasing
+
+next step usare diversi valore di reward
+ILLUMINAZIONE: il reward deve essere dato solo alle mosse che hanno fatto vincere, quindi solo alle mosse fatte dal RL player, non a tutte le mosse fatte durante la partita... quindi devo skippare dalla trajectory una mossa si e una no.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+RISULTATI TEST:
+
+1. RL vs Random, exp_rate = 0.3
+    Win rate player 1: 52.9%
+    Lose rate player 1: 45.5%
+    Average trajectory size: 32.238
+    ---------------------------------------------
+    Entries: 1644050
+    Policy size: 105.24 MB
+    ![alt text](plots/RL_vs_Rand_random_move_03_50k.png)
+
+2. RL vs Random, exp_rate = 0.5
+    Win rate player 1: 31.3%
+    Lose rate player 1: 66.8%
+    Draw rate: 1.9%
+    Average trajectory size: 41.338
+    ---------------------------------------------
+    Entries: 1856515
+    Policy size: 118.83 MB
+    ![alt text](plots/RL_vs_Rand_random_move_05_50k.png)
+
+3. RL vs Random, exp_rate = 0.7
+    Win rate player 1: 20.59%
+    Lose rate player 1: 76.0%
+    Draw rate: 3.44%
+    Average trajectory size: 44.886
+    ---------------------------------------------
+    Entries: 1910527
+    Policy size: 122.28 MB
+    ![alt text](plots/RL_vs_Rand_random_move_07_50k.png)
+
+4. RL vs Random, exp_rate = 0.3, decreasing
+    Win rate player 1: 42.8%
+    Lose rate player 1: 54.8%
+    Draw rate: 2.4%
+    Average trajectory size: 38.354
+    ---------------------------------------------
+    Entries: 1629991
+    Policy size: 104.33 MB
+    ![alt text](plots/RL_vs_Rand_random_move_03_decreasing_50k.png)
+
+5. RL vs Random, exp_rate = 0.5, decreasing
+    Win rate player 1: 45.2%
+    Lose rate player 1: 52.0%
+    Draw rate: 2.80%
+    Average trajectory size: 37.366
+    ---------------------------------------------
+    Entries: 1754504
+    Policy size: 112.30 MB
+    ![alt text](plots/RL_vs_Rand_random_move_05_decreasing_50k.png)
+
+6. RL vs Random, exp_rate = 0.7, decreasing
+    Win rate player 1: 25.5%
+    Lose rate player 1: 72.39%
+    Draw rate: 2.1%
+    Average trajectory size: 42.818
+    ---------------------------------------------
+    Entries: 1837809
+    Policy size: 117.63 MB
+    ![alt text](plots/RL_vs_Rand_random_move_07_decreasing_50k.png)
+
+7. RL vs Random, exp_rate = 0.3, decreasing, 100k round:
+    Win rate player 1: 64.2%
+    Lose rate player 1: 34.1%
+    Draw rate: 1.70%
+    Average trajectory size: 29.536
+    ---------------------------------------------
+    Entries: 2580516
+    Policy size: 165.18 MB
+    ![alt text](plots/RL_vs_Rand_random_move_03_decreasing_100k.png)
+
+8. RL vs Random, exp_rate = 0.5, decreasing, 100k round:
+    Win rate player 1: 70.0%
+    Lose rate player 1: 28.79%
+    Draw rate: 1.2%
+    Average trajectory size: 27.028
+    ---------------------------------------------
+    Entries: 2653108
+    Policy size: 169.82 MB
+    ![alt text](plots/RL_vs_Rand_random_move_05_decreasing_100k.png)
+
+9. RL vs Random, exp_rate = 0.7, decreasing, 100k round:
+    Win rate player 1: 59.09%
+    Lose rate player 1: 39.6%
+    Draw rate: 1.3%
+    Average trajectory size: 29.136
+    ---------------------------------------------
+    Entries: 3067759
+    Policy size: 196.36 MB
+    ![alt text](plots/RL_vs_Rand_random_move_07_decreasing_100k.png)
+
+10. RL vs Random, exp_rate = 0.3, decreasing, 150k round:
+    Win rate player 1: 68.7%
+    Lose rate player 1: 30.4%
+    Draw rate: 0.89%
+    Average trajectory size: 26.591
+    ---------------------------------------------
+    Entries: 3197522
+    Policy size: 204.67 MB
+    ![alt text](plots/RL_vs_Rand_random_move_03_decreasing_150k.png)
+
+
+
+Osservazioni:
+- con exp_rate costante, all'aumentare dell'exp rate diminuisce la win rate
+- guardando i grafici dei training senza diminuzione dell'exp_rate, notiamo che, rispetto a quelli con diminuzione, la possibilità di crescita è più bassa, per questo ho deciso di continuare a trainare quelli con il decay exp_rate

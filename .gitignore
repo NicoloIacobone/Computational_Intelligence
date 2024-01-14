@@ -7,3 +7,4 @@ quixo/policy_first_200k_player1_decreasing_from_05_to_01
 quixo/policy_first_200k_player1_decreasing_from_05_to_01.txt
 quixo/__pycache__/main.cpython-310.pyc
 quixo/__pycache__/main.cpython-310.pyc
+/quixo/plots
