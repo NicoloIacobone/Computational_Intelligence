@@ -478,3 +478,16 @@ Prossima modifica:
 - dare un reward infinito negativo se con la propria mossa si causa la vittoria dell'avversario in ReinfocementPlayer
 - dare un reward infinito positivo se con la propria mossa si causa la vittoria dell'avversario in ReinfocementPlayer
 - eliminazione dei loop nella funzione make_move del ReinforcementPlayer
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Conclusioni fino qui:
+Il gioco Quixo ha troppi stati possibili, con troppe mosse per arrivare alla vittoria, quindi è necessario un numero di round di training molto elevato.
+Non credo sia possibile arrivare ad un livello di win rate soddisfacente con il Reinforcement Learning base come già implementato.
+È necessario utilizzare dei trucchetti per migliorare il training, come ad esempio:
+- modificare il RandomPlayer affinche non faccia mosse che causano la vittoria dell'avversario.
+- dare un reward infinito negativo se con la propria mossa si causa la vittoria dell'avversario in ReinfocementPlayer
+- dare un reward infinito positivo se con la propria mossa si causa la propria vittoria in ReinfocementPlayer
+- eliminare i loop nella funzione make_move del ReinforcementPlayer
+- controllare le chiamate che utilizzano deepcopy e cercare di modificarle (computazionalmente costose)
+- vedi ChatGPT per ulteriori consigli sulla miglioria del codice
