@@ -29,11 +29,15 @@ if __name__ == '__main__':
     reinforcement_player = ReinforcementPlayer()
     environment = Utils()
 
-    # game = Game()
-    # game.play(reinforcement_player, random_player)
-
-    environment.train(reinforcement_player, random_player, 1_000)
+    environment.train(reinforcement_player, random_player)
     environment.test(reinforcement_player, random_player)
-    environment.evaluate_player(reinforcement_player, "test_policy_1")
+
+    # reinforcement_player.set_random_move(0.5)
+    # environment.train(reinforcement_player, random_player, 50_000, policy_name="rl_vs_rand_100k_decreasing05", plot=True, decreasing_exp_rate=True)
+    # environment.evaluate_player(reinforcement_player, "rl_vs_rand_100k_decreasing05_1")
+    # environment.train(reinforcement_player, random_player, 50_000, policy_name="rl_vs_rand_100k_decreasing05", plot=True, decreasing_exp_rate=True)
+    # environment.evaluate_player(reinforcement_player, "rl_vs_rand_100k_decreasing05_1")
+    # environment.test(reinforcement_player, random_player, policy_name="rl_vs_rand_100k_decreasing05")
+    # environment.evaluate_player(reinforcement_player, "new_hash_function_1")
 
 

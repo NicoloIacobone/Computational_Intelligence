@@ -25,11 +25,11 @@ class HumanPlayer(Player):
         return from_pos, move
     
 class ReinforcementPlayer(Player):
-    def __init__(self, random_move = 0.3, training = False):
+    def __init__(self, random_move = 0.3, learning_rate = 0.2, training = False):
         self.training = training # if we are training the model
         self.value_dictionary = defaultdict(float) # state of the game and its value
         # self.hit_state = defaultdict(int) # state of the game and how many times it was visited during the training phase
-        # self.epsilon = 0.1 # learning rate
+        self.learning_rate = learning_rate
         self.random_move = random_move # a value between 0 and 1, used to choose a random move when training
         self.trajectory = [] # list of states visited during the training phase
         self.available_moves = [] # list of available moves in a given state
@@ -91,10 +91,15 @@ class ReinforcementPlayer(Player):
         hashable_state = np.array2string(game._board.flatten(), separator = '') # get the hashable state
         self.trajectory.append(hashable_state) # add the state to the trajectory
     
-    def give_reward(self, reward):
-        for state in reversed(self.trajectory):
-            self.value_dictionary[state] += 0.2 * (0.9 * reward - self.value_dictionary[state])
-            reward = self.value_dictionary[state]
+    def give_reward(self, reward, suicide: bool = False):
+        step_penalty = -abs(reward / 50) # 2% of reward is subtracted from each step to favor faster wins
+        if not suicide: # if I haven't made the move that let me lose
+            for state in reversed(self.trajectory): # for each move I made, starting from the last one
+                self.value_dictionary[state] += self.learning_rate * (0.9 * reward - self.value_dictionary[state]) + step_penalty # distribute the reward
+                reward = self.value_dictionary[state] # reduce the reward that will be used for the next step's reward
+            else: # if I made the move that let me lose
+                self.value_dictionary[self.trajectory[-1]] += reward # apply the negative reward (it is huge) only on the last move
+
 
     def get_rewards(self):
         return sorted(self.value_dictionary.items(), key = lambda x: x[1], reverse = True)

@@ -14,8 +14,8 @@ class Utils:
               player1: Player, 
               player2: Player, 
               games: int = 1_000, 
-              win_reward: int = 1, 
-              lose_reward: int = -1, 
+              win_reward: int = 50, 
+              lose_reward: int = -50, 
               policy_name = "test_policy", 
               plot: bool = False, 
               decreasing_exp_rate: bool = False,
@@ -42,20 +42,30 @@ class Utils:
                     
             game = Game()
             win = game.play(player1, player2)
+            suicide_opponent = win != game.current_player_idx # if the move of a player caused the winning of the opponent
             if win == 0:
-                if isinstance(player1, ReinforcementPlayer):
-                    player1.give_reward(win_reward)
-                    # player1.give_reward(win_reward - (ceil(len(game.trajectory_player_1) / 100)), game.trajectory_player_1)
-                if isinstance(player2, ReinforcementPlayer):
-                    player2.give_reward(lose_reward - (ceil(len(player2.trajectory) / 100)))
+                if isinstance(player1, ReinforcementPlayer): # if I won (RL agent)
+                    if not suicide_opponent: # if I made the winning move
+                        player1.give_reward(win_reward) # I receive the positive reward
+                        # player1.give_reward(win_reward - (ceil(len(game.trajectory_player_1) / 100)), game.trajectory_player_1)
+                        # otherwise if the opponent made me win with his last move, I don't reward the agent (i.e. skip this game)
+
+                if isinstance(player2, ReinforcementPlayer): # if I lose (RL agent)
+                    if not suicide_opponent: # if the opponent made the winning move
+                        player2.give_reward(lose_reward) # I receive a negative reward
+                    else: # if I made myself lose with my last move (suicide)
+                        player2.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
+
             elif win == 1:
-                if isinstance(player1, ReinforcementPlayer):
-                    if not new_reward:
-                        player1.give_reward(lose_reward)
-                    else:
-                        player1.give_reward(lose_reward - (ceil(len(player1.trajectory) / 100)))
-                if isinstance(player2, ReinforcementPlayer):
-                    player2.give_reward(win_reward - (ceil(len(player2.trajectory) / 100)))
+                if isinstance(player1, ReinforcementPlayer): # if I lose (RL agent)
+                    if not suicide_opponent: # if the opponent made the winning move
+                            player1.give_reward(lose_reward) # I receive a negative reward
+                    else: # if I made myself lose with my last move (suicide)
+                         player1.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
+                if isinstance(player2, ReinforcementPlayer): # if I won (RL agent)
+                    if not suicide_opponent: # if I made the winning move
+                        player2.give_reward(win_reward) # I receive the positive reward
+                    # otherwise if the opponent made me win with his last move, I don't reward the agent (i.e. skip this game)
 
         if isinstance(player1, ReinforcementPlayer):
             player1.create_policy(policy_name + "_1")
