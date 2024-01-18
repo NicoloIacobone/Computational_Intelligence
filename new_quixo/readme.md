@@ -53,3 +53,15 @@ Trying next training using the following parameters:
 - step_penalty = 1% of the win_reward
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test RL vs Random, 500k episodes with parameters as above:
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Starting implementing minimax agent.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Per il nico del futuro: guarda il file policy_1.txt, i primi 5 valori sono troppo alti, devi capire perché e sistemare il codice. È un problema di backpropagation, probabilmente.

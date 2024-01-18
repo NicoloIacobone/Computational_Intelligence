@@ -29,6 +29,9 @@ if __name__ == '__main__':
     reinforcement_player = ReinforcementPlayer()
     environment = Utils()
 
-    environment.train(reinforcement_player, random_player, 500_000, policy_name="500k", plot=True, decreasing_exp_rate=True)
-    environment.test(reinforcement_player, random_player, policy_name="500k")
-    environment.evaluate_player(reinforcement_player, "500k_1")
+    # environment.train(reinforcement_player, random_player, 500_000, policy_name="500k", plot=True, decreasing_exp_rate=True)
+    # environment.test(reinforcement_player, random_player, policy_name="500k")
+    # environment.evaluate_player(reinforcement_player, "500k_1")
+
+    environment.train(reinforcement_player, random_player, 1000)
+    reinforcement_player.policy_to_txt()

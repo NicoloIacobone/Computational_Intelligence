@@ -158,7 +158,53 @@ class ReinforcementPlayer(Player):
         sorted_dict = self.get_rewards()
 
         # create the txt file
-        fw = open('policy.txt', 'w')
+        fw = open('policy_1.txt', 'w')
         for key, value in sorted_dict:
             fw.write(str(key) + ' ' + str(value) + '\n')
         fw.close()
+
+class MinimaxPlayer(Player):
+    def __init__(self, depth=3):
+        self.max_depth = depth
+
+    def make_move(self, game: 'Game') -> tuple[tuple[int, int], Move]:
+        _, move = self.minimax(game, self.max_depth, float('-inf'), float('inf'), True)
+        return move
+
+    def minimax(self, game, depth, alpha, beta, maximizing_player):
+        if depth == 0 or game.check_winner() != -1:
+            return self.evaluate(game), None  # Chiamare la tua funzione di valutazione
+
+        if maximizing_player:
+            max_eval = float('-inf')
+            best_move = None
+            for move in game.get_available_moves():
+                game.make_move(move[0], move[1], game.current_player_idx)
+                eval = self.minimax(game, depth - 1, alpha, beta, False)[0]
+                game.undo_move(move[0], move[1])
+                if eval > max_eval:
+                    max_eval = eval
+                    best_move = move
+                alpha = max(alpha, eval)
+                if beta <= alpha:
+                    break  # Alpha-Beta Pruning
+            return max_eval, best_move
+        else:
+            min_eval = float('inf')
+            best_move = None
+            for move in game.get_available_moves():
+                game.make_move(move[0], move[1], game.current_player_idx)
+                eval = self.minimax(game, depth - 1, alpha, beta, True)[0]
+                game.undo_move(move[0], move[1])
+                if eval < min_eval:
+                    min_eval = eval
+                    best_move = move
+                beta = min(beta, eval)
+                if beta <= alpha:
+                    break  # Alpha-Beta Pruning
+            return min_eval, best_move
+
+    def evaluate(self, game):
+        # Implementare la tua funzione di valutazione
+        # Ritorna un punteggio che rappresenta quanto la situazione è favorevole per il giocatore corrente
+        pass
