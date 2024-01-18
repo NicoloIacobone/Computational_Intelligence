@@ -18,12 +18,38 @@ new_hash_function: 1:41 min, 8.66MB
 I will continue with the old_hash_function.
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 From this moment I will use the last commit, 0edba49 "revert to 6th of january"
--------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Let's apply some modifications to the reward distribution:
 <!-- - [ ] +1 reward if it changes the board (i.e. if it is a move that reduces by 1 the number of -1 (neutral) cells) -->
-- [ ] +10 reward if it wins the game
-- [ ] -10 reward if it loses the game
-- [ ] (lose_reward * 1000) to the move that makes the opponent win the game, no reward to the other moves (can be done with an inner function that checks if the move makes the opponent win)
-- [ ] -abs(reward / 50) reward for each move (to improve faster wins)
+- [X] +10 reward if it wins the game
+- [X] -10 reward if it loses the game
+- [X] (lose_reward * 1000) to the move that makes the opponent win the game, no reward to the other moves (can be done with an inner function that checks if the move makes the opponent win)
+- [X] (win_reward * 1000) to the move that makes the agent win the game
+- [X] -abs(reward / 50) reward for each move (to improve faster wins)
+
+Some more modifications to the make_move function:
+- [] avoid loops (i.e. avoid moves that make the board return to a state that is already in the trajectory)
+
+I have a doubt: why to hash the states ? Can't I simply use the board as a key ? I will try to do so.
+It's not possible due to the fact that the key of a dictionary, in Python, must be hashable. I tried using tuple(test_board._board.flatten()) and it work, and it is twice faster than the np.array2string function. Love it!
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+<!-- Everything seems working better, I have modified a little bit the reward distribution, but I've noticed that the backpropagation is not working properly.
+The fact is that the states can be both responsible of winning and losing states.
+There is the need to count how many times a move is responsible of a win and how many times it is responsible of a loss using a counter. -->
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Trying next training using the following parameters:
+- learning_rate = 0.1, halved every 1/5 of the episodes
+- exp_rate = 0.9, halved every 1/5 of the episodes
+- win_reward = +10
+- lose_reward = -10
+- step_penalty = 1% of the win_reward
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------

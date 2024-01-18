@@ -50,9 +50,9 @@ class Game(object):
         '''
         return deepcopy(self.current_player_idx)
 
-    def print(self):
-        '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
-        print(self._board)
+    # def print(self):
+    #     '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
+    #     print(self._board)
 
     def check_winner(self) -> int:
         '''Check the winner. Returns the player ID of the winner if any, otherwise returns -1'''
@@ -83,6 +83,23 @@ class Game(object):
             # return the relative id
             return self._board[0, -1]
         return -1
+    
+    def nice_print(self):
+        '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
+        board_str = ""
+
+        for row in self._board:
+            for cell in row:
+                if cell == -1:
+                    board_str += '⬜️ '
+                elif cell == 0:
+                    board_str += '❌ '
+                else:
+                    board_str += '⭕️ '
+
+            board_str += '\n'
+
+        print(board_str)
 
     def play(self, player1: Player, player2: Player) -> int:
         '''Play the game. Returns the winning player'''
@@ -96,6 +113,7 @@ class Game(object):
                 from_pos, slide = players[self.current_player_idx].make_move(
                     self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
+            # self.nice_print()
             winner = self.check_winner()
         return winner
 
