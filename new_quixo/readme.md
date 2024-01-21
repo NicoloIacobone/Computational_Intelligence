@@ -68,4 +68,10 @@ Per il nico del futuro: guarda il file policy_1.txt, i primi 5 valori sono tropp
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Maybe I fixed it.
+Maybe I fixed it. (spoiler, I didn't)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Fixed the problem of choosing a random move if no state with the available moves is found in the policy. Before this fix the agent always chose the first available move, which is not good. Now I have 50% of winning if it's not trained.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------

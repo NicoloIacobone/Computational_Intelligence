@@ -26,25 +26,28 @@ class MyPlayer(Player):
 
 if __name__ == '__main__':
     random_player = RandomPlayer()
-
     reinforcement_player = ReinforcementPlayer()
-    reinforcement_player.set_random_move(0.5)
+    # reinforcement_player.set_random_move(0.5)
 
-    reinforcement_player.load_policy("no_decr_1kk_1_1")
+    # reinforcement_player.load_policy("no_decr_1kk_1_1")
 
     environment = Utils()
 
-    for i in range(2):
-        environment.train(reinforcement_player, random_player, 1_000_000, policy_name=("no_decr_1kk_" + str(i+1)))
-        environment.test(reinforcement_player, random_player, policy_name=("no_decr_1kk_" + str(i+1)))
-        environment.evaluate_player(reinforcement_player, ("no_decr_1kk_1_" + str(i+1)))
-        reinforcement_player.policy_to_txt("no_decr_1kk_" + str(i+1))
+    environment.train(reinforcement_player, random_player, 1000, 100, -100)
+    environment.test(reinforcement_player, random_player, 100)
+    reinforcement_player.policy_to_txt()
 
-    reinforcement_player.set_random_move(0.5)
-    for i in range(3):
-        environment.train(reinforcement_player, random_player, 1_000_000, policy_name=("1kk_" + str(i+1)), decreasing_exp_rate=True)
-        environment.test(reinforcement_player, random_player, policy_name=("1kk_" + str(i+1)))
-        environment.evaluate_player(reinforcement_player, ("1kk_1_" + str(i+1)))
-        reinforcement_player.policy_to_txt("1kk_" + str(i+1))
-        reinforcement_player.set_random_move(reinforcement_player.random_move * 5)
-        reinforcement_player.set_learning_rate(reinforcement_player.learning_rate * 5)
+    # for i in range(2):
+    #     environment.train(reinforcement_player, random_player, 1_000_000, policy_name=("no_decr_1kk_" + str(i+1)))
+    #     environment.test(reinforcement_player, random_player, policy_name=("no_decr_1kk_" + str(i+1)))
+    #     environment.evaluate_player(reinforcement_player, ("no_decr_1kk_1_" + str(i+1)))
+    #     reinforcement_player.policy_to_txt("no_decr_1kk_" + str(i+1))
+
+    # reinforcement_player.set_random_move(0.5)
+    # for i in range(3):
+    #     environment.train(reinforcement_player, random_player, 1_000_000, policy_name=("1kk_" + str(i+1)), decreasing_exp_rate=True)
+    #     environment.test(reinforcement_player, random_player, policy_name=("1kk_" + str(i+1)))
+    #     environment.evaluate_player(reinforcement_player, ("1kk_1_" + str(i+1)))
+    #     reinforcement_player.policy_to_txt("1kk_" + str(i+1))
+    #     reinforcement_player.set_random_move(reinforcement_player.random_move * 5)
+    #     reinforcement_player.set_learning_rate(reinforcement_player.learning_rate * 5)

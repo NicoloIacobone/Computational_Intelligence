@@ -18,7 +18,7 @@ class Utils:
               lose_reward: int = -10, # reward for losing
               policy_name = "test_policy", # name of the policy
               plot: bool = False, # if we want to plot the win rate
-              decreasing_exp_rate: bool = False) -> None: # if we want to decrease the random move value during training
+              decreasing_exp_rate: bool = False, debug = True) -> None: # if we want to decrease the random move value during training
         
         if isinstance(player1, ReinforcementPlayer):
             player1_reinforcement = True
@@ -48,29 +48,40 @@ class Utils:
                     
             game = Game() # create a new game
             win = game.play(player1, player2) # play the game
-            suicide_opponent = win != game.current_player_idx # if the move of a player caused the winning of the opponent
-            if win == 0: # if first player won
-                if player1_reinforcement: # if I won (RL agent)
-                    if not suicide_opponent: # if I made the winning move
-                        player1.give_reward(win_reward) # I receive the positive reward
+
+            if debug:
+                suicide = win != game.current_player_idx # if the move of a player caused the winning of the opponent
+                if not suicide and win == 0:
+                    player1.give_reward(win_reward)
+                elif win == 1:
+                    if suicide:
+                        player1.give_reward(lose_reward, True)
+                    else:
+                        player1.give_reward(lose_reward)
+            else:
+                suicide_opponent = win != game.current_player_idx # if the move of a player caused the winning of the opponent
+                if win == 0: # if first player won
+                    if player1_reinforcement: # if I won (RL agent)
+                        if not suicide_opponent: # if I made the winning move
+                            player1.give_reward(win_reward) # I receive the positive reward
+                            # otherwise if the opponent made me win with his last move, I don't reward the agent (i.e. skip this game)
+
+                    if player2_reinforcement: # if I lose (RL agent)
+                        if not suicide_opponent: # if the opponent made the winning move
+                            player2.give_reward(lose_reward) # I receive a negative reward
+                        else: # if I made myself lose with my last move (suicide)
+                            player2.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
+
+                elif win == 1: # if second player won
+                    if player1_reinforcement: # if I lose (RL agent)
+                        if not suicide_opponent: # if the opponent made the winning move
+                                player1.give_reward(lose_reward) # I receive a negative reward
+                        else: # if I made myself lose with my last move (suicide)
+                            player1.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
+                    if player2_reinforcement: # if I won (RL agent)
+                        if not suicide_opponent: # if I made the winning move
+                            player2.give_reward(win_reward) # I receive the positive reward
                         # otherwise if the opponent made me win with his last move, I don't reward the agent (i.e. skip this game)
-
-                if player2_reinforcement: # if I lose (RL agent)
-                    if not suicide_opponent: # if the opponent made the winning move
-                        player2.give_reward(lose_reward) # I receive a negative reward
-                    else: # if I made myself lose with my last move (suicide)
-                        player2.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
-
-            elif win == 1: # if second player won
-                if player1_reinforcement: # if I lose (RL agent)
-                    if not suicide_opponent: # if the opponent made the winning move
-                            player1.give_reward(lose_reward) # I receive a negative reward
-                    else: # if I made myself lose with my last move (suicide)
-                         player1.give_reward((lose_reward * 1000), True) # I receive a strong negative reward (only on the last move)
-                if player2_reinforcement: # if I won (RL agent)
-                    if not suicide_opponent: # if I made the winning move
-                        player2.give_reward(win_reward) # I receive the positive reward
-                    # otherwise if the opponent made me win with his last move, I don't reward the agent (i.e. skip this game)
 
         # when training finishes
         if player1_reinforcement:

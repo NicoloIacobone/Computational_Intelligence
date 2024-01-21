@@ -47,6 +47,7 @@ class ReinforcementPlayer(Player):
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
         best_move_score = None # the best move score is initialized with a very low value
         best_move = None # the best move is initialized with None
+        never_visited = True # flag to check if the state was never visited
         self.compute_available_moves(game) # compute all possible moves in the current state
 
         if random.random() < self.random_move: # if a random number is lower than the random_move value
@@ -67,12 +68,17 @@ class ReinforcementPlayer(Player):
                 # to solve the problem of unseen states that are added to the dictionary with a value of 0 while
                 # looking for the best move, if actual_move_score is 0 it means that the state was never visited, in this case
                 # we remove the state from the dictionary
-                if actual_move_score == 0:
-                    del self.value_dictionary[hashable_state]
+                if actual_move_score == 0: # if the state was never visited
+                    del self.value_dictionary[hashable_state] # remove the state from the dictionary because it was created from the access to read the value
+                else:
+                    never_visited = False
 
                 if best_move is None or actual_move_score > best_move_score:
                     best_move_score = actual_move_score
                     best_move = move
+
+        if never_visited: # no state was visited, so we have to choose a random move
+            best_move = random.choice(self.available_moves) # choose a random move
 
         from_pos, slide = best_move
 
@@ -87,25 +93,46 @@ class ReinforcementPlayer(Player):
         if np.count_nonzero(test_board._board == -1) == 25 or np.count_nonzero(test_board._board == -1) == 24:
             self.trajectory = []
         test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
-        # hashable_state = np.array2string(game._board.flatten(), separator = '') # get the hashable state
+        # hashable_state = np.array2string(test_board._board.flatten(), separator = '') # get the hashable state
         # hashable_state = tuple(test_board._board.flatten()) # get the hashable state (use the board as key)
         hashable_state = game._board.flatten().tobytes()
         self.trajectory.append(hashable_state) # add the state to the trajectory
-    
-    def give_reward(self, reward, suicide: bool = False):
-        step_penalty = -abs(reward / 100) # 1% of reward is subtracted from each step to favor faster wins
-        first_move = True
-        if not suicide: # if I haven't made the move that let me lose
-            for state in reversed(self.trajectory): # for each move I made, starting from the last one
-                if first_move and reward > 0: # if the reward is positive (i.e. the agent won), give a big reward to the last move 
-                    self.value_dictionary[state] += reward * 1_000
-                    first_move = False
-                else:
-                    self.value_dictionary[state] += self.learning_rate * (0.9 * reward - self.value_dictionary[state]) + step_penalty # distribute the reward
-                    reward = self.value_dictionary[state] # reduce the reward that will be used for the next step's reward
-                    first_move = False
-        else: # if I made the move that let me lose
-            self.value_dictionary[self.trajectory[-1]] += reward # apply the negative reward (it is huge) only on the last move
+
+    def give_reward(self, reward, suicide: bool = False, debug = True):
+        if debug:
+            count = 0
+            decrease_point = len(self.trajectory) // 5
+
+            if reward > 0 or suicide:
+                self.value_dictionary[self.trajectory[-1]] += reward * 100_000_000
+                # huge value assigned to the winning move to not insert an if inside the for that is true only one time
+
+            if not suicide:
+                for state in reversed(self.trajectory):
+                    self.value_dictionary[state] += reward
+                    reward *= 0.95
+                    if self.value_dictionary[state] == 0:
+                        self.value_dictionary[state] += 1e-50 # a value can't be zero, otherwise it is confused with a never visited state
+
+                    count += 1
+                    if count % decrease_point == 0:
+                        reward *= 0.5
+        else:
+            step_penalty = -abs(reward / 100) # 1% of reward is subtracted from each step to favor faster wins
+            first_move = True
+            if not suicide: # if I haven't made the move that let me lose
+                for state in reversed(self.trajectory): # for each move I made, starting from the last one
+                    if first_move and reward > 0: # if the reward is positive (i.e. the agent won), give a big reward to the last move 
+                        self.value_dictionary[state] += reward * 1_000
+                        first_move = False
+                    else:
+                        self.value_dictionary[state] += self.learning_rate * (0.9 * reward - self.value_dictionary[state]) + step_penalty # distribute the reward
+                        reward = self.value_dictionary[state] # reduce the reward that will be used for the next step's reward
+                        first_move = False
+            else: # if I made the move that let me lose
+                self.value_dictionary[self.trajectory[-1]] += reward # apply the negative reward (it is huge) only on the last move
+            if self.value_dictionary[state] == 0:
+                    self.value_dictionary[state] += 1e-50 # a value can't be zero, otherwise it is confused with a never visited state
 
 
     def get_rewards(self):
@@ -149,7 +176,7 @@ class ReinforcementPlayer(Player):
 
 
     # transform the ordered policy into a txt file
-    def policy_to_txt(self, policy_name = "test_policy_1"):
+    def policy_to_txt(self, policy_name = "test_policy_1.txt"):
         """Transforms the policy into a txt file"""
         # sort the dictionary
         sorted_dict = self.get_rewards()
