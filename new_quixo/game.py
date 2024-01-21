@@ -115,6 +115,8 @@ class Game(object):
                 ok = self.__move(from_pos, slide, self.current_player_idx)
             # self.nice_print()
             winner = self.check_winner()
+            # self.nice_print()
+        
         return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:

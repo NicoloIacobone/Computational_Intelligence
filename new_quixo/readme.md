@@ -75,3 +75,10 @@ Maybe I fixed it. (spoiler, I didn't)
 Fixed the problem of choosing a random move if no state with the available moves is found in the policy. Before this fix the agent always chose the first available move, which is not good. Now I have 50% of winning if it's not trained.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Now I just do some basic training and then I will try to implement a more complex reward function, based on the number of adjacent pieces of the same color.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+The training gave again the same result as before, no improvement.
+Starting to implement the minimax based agent
