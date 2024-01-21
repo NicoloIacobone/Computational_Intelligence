@@ -65,3 +65,7 @@ Starting implementing minimax agent.
 
 
 Per il nico del futuro: guarda il file policy_1.txt, i primi 5 valori sono troppo alti, devi capire perché e sistemare il codice. È un problema di backpropagation, probabilmente.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Maybe I fixed it.

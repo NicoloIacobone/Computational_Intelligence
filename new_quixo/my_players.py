@@ -58,7 +58,8 @@ class ReinforcementPlayer(Player):
                 from_pos, slide = move # get the move
                 _ = test_board._Game__move(from_pos, slide, test_board.current_player_idx)
                 # hashable_state = np.array2string(game._board.flatten(), separator = '')
-                hashable_state = tuple(game._board.flatten()) # get the hashable state (use the board as key)
+                # hashable_state = tuple(game._board.flatten()) # get the hashable state (use the board as key)
+                hashable_state = game._board.flatten().tobytes()
                 actual_move_score = self.value_dictionary[hashable_state] # get the value of the state
                 
                 test_board._board = old_board.copy() # restore the old board after testing a move
@@ -87,26 +88,22 @@ class ReinforcementPlayer(Player):
             self.trajectory = []
         test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
         # hashable_state = np.array2string(game._board.flatten(), separator = '') # get the hashable state
-        hashable_state = tuple(test_board._board.flatten()) # get the hashable state (use the board as key)
+        # hashable_state = tuple(test_board._board.flatten()) # get the hashable state (use the board as key)
+        hashable_state = game._board.flatten().tobytes()
         self.trajectory.append(hashable_state) # add the state to the trajectory
     
     def give_reward(self, reward, suicide: bool = False):
         step_penalty = -abs(reward / 100) # 1% of reward is subtracted from each step to favor faster wins
-        # print("Step penalty = ", step_penalty)
         first_move = True
         if not suicide: # if I haven't made the move that let me lose
             for state in reversed(self.trajectory): # for each move I made, starting from the last one
-                # print("For the state ", state)
-                # print("before the update: ", self.value_dictionary[state])
-                # print("Reward: ", reward)
-                # print("Learning Rate: ", self.learning_rate)
                 if first_move and reward > 0: # if the reward is positive (i.e. the agent won), give a big reward to the last move 
                     self.value_dictionary[state] += reward * 1_000
                     first_move = False
                 else:
                     self.value_dictionary[state] += self.learning_rate * (0.9 * reward - self.value_dictionary[state]) + step_penalty # distribute the reward
                     reward = self.value_dictionary[state] # reduce the reward that will be used for the next step's reward
-                # print("after the update: ", self.value_dictionary[state])
+                    first_move = False
         else: # if I made the move that let me lose
             self.value_dictionary[self.trajectory[-1]] += reward # apply the negative reward (it is huge) only on the last move
 
@@ -152,13 +149,13 @@ class ReinforcementPlayer(Player):
 
 
     # transform the ordered policy into a txt file
-    def policy_to_txt(self):
+    def policy_to_txt(self, policy_name = "test_policy_1"):
         """Transforms the policy into a txt file"""
         # sort the dictionary
         sorted_dict = self.get_rewards()
 
         # create the txt file
-        fw = open('policy_1.txt', 'w')
+        fw = open(policy_name, 'w')
         for key, value in sorted_dict:
             fw.write(str(key) + ' ' + str(value) + '\n')
         fw.close()
