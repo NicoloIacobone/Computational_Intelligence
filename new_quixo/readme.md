@@ -82,3 +82,12 @@ Now I just do some basic training and then I will try to implement a more comple
 
 The training gave again the same result as before, no improvement.
 Starting to implement the minimax based agent
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tests with reinforcement learning vs random agent. 100k + 500k + 100k + 3kk episodes. All done starting from 0.9 exp rate and decreasing exp rate that get halved every 20% of the episodes:
+Win rate player 1: 85.1%
+Lose rate player 1: 14.899999999999999%
+Draw rate: 0.0%
+Average trajectory size: 16.0
+Policy size: 2,69GB
