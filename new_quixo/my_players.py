@@ -195,101 +195,40 @@ class ReinforcementPlayer(Player):
             fw.write(str(key) + ' ' + str(value) + '\n')
         fw.close()
 
-# class MinimaxPlayer(Player):
-#     def __init__(self, depth=3):
-#         self.max_depth = depth
-
-#     def make_move(self, game: 'Game') -> tuple[tuple[int, int], Move]:
-#         _, move = self.minimax(game, self.max_depth, float('-inf'), float('inf'), True)
-#         return move
-
-#     def minimax(self, game, depth, alpha, beta, maximizing_player):
-#         if depth == 0 or game.check_winner() != -1:
-#             return self.evaluate(game), None  # Chiamare la tua funzione di valutazione
-
-#         if maximizing_player:
-#             max_eval = float('-inf')
-#             best_move = None
-#             for move in game.get_available_moves():
-#                 game.make_move(move[0], move[1], game.current_player_idx)
-#                 eval = self.minimax(game, depth - 1, alpha, beta, False)[0]
-#                 game.undo_move(move[0], move[1])
-#                 if eval > max_eval:
-#                     max_eval = eval
-#                     best_move = move
-#                 alpha = max(alpha, eval)
-#                 if beta <= alpha:
-#                     break  # Alpha-Beta Pruning
-#             return max_eval, best_move
-#         else:
-#             min_eval = float('inf')
-#             best_move = None
-#             for move in game.get_available_moves():
-#                 game.make_move(move[0], move[1], game.current_player_idx)
-#                 eval = self.minimax(game, depth - 1, alpha, beta, True)[0]
-#                 game.undo_move(move[0], move[1])
-#                 if eval < min_eval:
-#                     min_eval = eval
-#                     best_move = move
-#                 beta = min(beta, eval)
-#                 if beta <= alpha:
-#                     break  # Alpha-Beta Pruning
-#             return min_eval, best_move
-
-#     def evaluate(self, game):
-#         # Implementare la tua funzione di valutazione
-#         # Ritorna un punteggio che rappresenta quanto la situazione è favorevole per il giocatore corrente
-#         pass
 
 class MinimaxPlayer(Player):
-    def __init__(self, depth : int = 3, eval_function : int = 2, maximizing_player : bool = True) -> None:
+    def __init__(self, depth : int = 3, eval_function : int = 1, maximizing_player : bool = True) -> None:
         super().__init__()
         self.depth = depth
         self.eval_function = eval_function
         self.maximizing_player = maximizing_player
 
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
-        _, move = self.minimax(game, self.depth, float('-inf'), float('inf'), self.maximizing_player)
-        # print("value: ", value)
-        # print("move: ", move)
+        score, move = self.minimax(game, self.depth, float('-inf'), float('inf'), self.maximizing_player)
         return move
         
     def minimax(self, state : Game, depth : int, alpha : float, beta : float, maximizing_player : bool):
-        # print("depth: ", depth)
-        # print("alpha: ", alpha)
-        # print("beta: ", beta)
-        # print("maximizing_player: ", maximizing_player)
-        # print("current_player_idx: ", state.current_player_idx)
         if depth == 0 or state.check_winner() != -1:
             return self.evaluate(state), None
         
         available_moves = self.compute_available_moves(state)
-        # for move in available_moves:
-            # print(move)
-        
-        # print("--------------------------------------------")
-        
+
         if maximizing_player:
-            # print("maximizing_player")
             max_eval = float('-inf')
             best_move = None
+            
 
             for move in available_moves: # for each possible move --> in minimax lingo, this is "for each child of position"
-                # print("move: ", move)
                 child_state = MyGame(state) # create a new board to test the moves
                 from_pos, slide = move # get the move
                 _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx) # apply the move = create a new state
 
                 eval, _ = self.minimax(child_state, depth - 1, alpha, beta, False) # get the value of the state
-                # print("eval: ", eval)
 
-                if eval is None:
-                    print("eval is None, maximising")
+ 
                 max_eval = max(max_eval, eval) # get the maximum value
-                # print("max_eval: ", max_eval)
 
                 alpha = max(alpha, eval) # update alpha
-                # print("alpha: ", alpha)
 
                 if beta <= alpha:
                     break
@@ -297,48 +236,31 @@ class MinimaxPlayer(Player):
                 # check if the current move is the best move
                 if max_eval == eval:
                     best_move = move
-
+            # print ("max_eval: ", max_eval, "\tbest_move: ", best_move)
             return max_eval, best_move
         
         else:
-            # print("minimizing_player")
             min_eval = float('inf')
             best_move = None
 
             for move in available_moves:
-                # print("move: ", move)
                 child_state = MyGame(state)
                 from_pos, slide = move
                 _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
 
                 eval, _ = self.minimax(child_state, depth - 1, alpha, beta, True)
-                # print("eval: ", eval)
+ 
 
-                if eval is None:
-                    print("eval is None, minimising")
-
-                # print("min_eval: ", min_eval)
-                # print("eval: ", eval)
                 min_eval = min(min_eval, eval)
-                # print("min_eval: ", min_eval)
 
                 beta = min(beta, eval)
-                # print("beta: ", beta)
 
                 if beta <= alpha:
-                    # print("beta <= alpha")
                     break
 
                 # check if the current move is the best move
                 if min_eval == eval:
                     best_move = move
-
-                # print("best_move: ", best_move)
-                # print("--------------------------------------------")
-
-            # print("return min_eval: ", min_eval)
-            # print("return best_move: ", best_move)
-            # print("--------------------------------------------")
             return min_eval, best_move
 
     def compute_available_moves(self, game: Game):
@@ -350,93 +272,92 @@ class MinimaxPlayer(Player):
     def evaluate(self, game : Game):
         if self.eval_function == 1:
             # The simplest evaluation function is to give a positive value to a winning position and a negative value to a losing position.
-            if game.check_winner() == 0:
+            winner = game.check_winner()
+            if winner == 0:
                 return 1
-            elif game.check_winner() == 1:
+            elif winner == 1:
                 return -1
             else:
                 return 0
             
         elif self.eval_function == 2:
             # A more sophisticated evaluation function is to give a score based on the number of pieces on winning lines
-            board = game._board
-
-            score_0_row = [0, 0, 0, 0, 0]
-            score_1_row = [0, 0, 0, 0, 0]
-            score_0_col = [0, 0, 0, 0, 0]
-            score_1_col = [0, 0, 0, 0, 0]
-            score_0_diag = [0, 0]
-            score_1_diag = [0, 0]
-
-            for i in range(5):
-                for j in range(5):
-                    if board[i][j] == 0:
-                        score_0_row[i] += 1
-                        score_0_col[j] += 1
-                    elif board[i][j] == 1:
-                        score_1_row[i] += 1
-                        score_1_col[j] += 1
-
-                    if i == j: # on the first diagonal
-                        if board[i][j] == 0:
-                            score_0_diag[0] += 1
-                        elif board[i][j] == 1:
-                            score_1_diag[0] += 1
-
-                    if i + j == 4: # on the second diagonal
-                        if board[i][j] == 0:
-                            score_0_diag[1] += 1
-                        elif board[i][j] == 1:
-                            score_1_diag[1] += 1
-
-            score_0_concatenated = score_0_row + score_0_col + score_0_diag
-            score_1_concatenated = score_1_row + score_1_col + score_1_diag
-
-
-            score_maximising_final = 0
-            score_minimising_final = 0
-
-            if 5 in score_0_concatenated:  # if player 0 (maximising player) won
-                if self.maximizing_player: # if it is the current player
-                    score_maximising_final += 22621
-                elif not self.maximizing_player: # if it is the opponent
-                    score_minimising_final -= 22621
-            elif 5 in score_1_concatenated:  # if player 1 (minimising player) won
-                if self.maximizing_player:
-                    score_maximising_final -= 22621
-                elif not self.maximizing_player:
-                    score_minimising_final += 22621
+            winner = game.check_winner()
+            if winner == 0:
+                return 22621
+            elif winner == 1:
+                return -22621
             else:
+                board = game._board
+
+                score_0_row = [0, 0, 0, 0, 0]
+                score_1_row = [0, 0, 0, 0, 0]
+                score_0_col = [0, 0, 0, 0, 0]
+                score_1_col = [0, 0, 0, 0, 0]
+                score_0_diag = [0, 0]
+                score_1_diag = [0, 0]
+
+                for i in range(5):
+                    for j in range(5):
+                        if board[i][j] == 0:
+                            score_0_row[i] += 1
+                            score_0_col[j] += 1
+                        elif board[i][j] == 1:
+                            score_1_row[i] += 1
+                            score_1_col[j] += 1
+
+                        if i == j: # on the first diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[0] += 1
+                            elif board[i][j] == 1:
+                                score_1_diag[0] += 1
+
+                        if i + j == 4: # on the second diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[1] += 1
+                            elif board[i][j] == 1:
+                                score_1_diag[1] += 1
+
+                score_0_concatenated = score_0_row + score_0_col + score_0_diag
+                score_1_concatenated = score_1_row + score_1_col + score_1_diag
+
+
+                score_maximising_final = 0
+                score_minimising_final = 0
+
+                # scores = [0, 1, 13, 157, 1885, 22621]
+                scores = [0, 0, 0, 157, 1885, 22621]
+
                 for value in score_0_concatenated:
-                    if value == 4:
-                        score_maximising_final += 1885 # maximising player gets a positive score = advantage
-                        score_minimising_final += 1885 # minimising player gets a positive score = disadvantage
-                    elif value == 3:
-                        score_maximising_final += 157
-                        score_minimising_final += 157
-                    elif value == 2:
-                        score_maximising_final += 13
-                        score_minimising_final += 13
-                    elif value == 1:
-                        score_maximising_final += 1
-                        score_minimising_final += 1
+                    score_maximising_final += scores[value]
                 for value in score_1_concatenated:
-                    if value == 4:
-                        score_minimising_final -= 1885 # minimising player gets a negative score = advantage
-                        score_maximising_final -= 1885 # maximising player gets a negative score = disadvantage
-                    elif value == 3:
-                        score_minimising_final -= 157
-                        score_maximising_final -= 157
-                    elif value == 2:
-                        score_minimising_final -= 13
-                        score_maximising_final -= 13
-                    elif value == 1:
-                        score_minimising_final -= 1
-                        score_maximising_final -= 1
-            if self.maximizing_player:
-                return score_maximising_final
-            elif not self.maximizing_player:
-                return score_minimising_final
-            else:
-                return 0
+                    score_minimising_final -= scores[value]
+
+                # return score_maximising_final + score_minimising_final
+                if self.maximizing_player:
+                    return score_maximising_final
+                else:
+                    return score_minimising_final
+
+            # if 5 in score_0_concatenated:  # if player 0 (maximising player) won
+            #     if self.maximizing_player: # if it is the current player
+            #         score_maximising_final += scores[5]
+            #     elif not self.maximizing_player: # if it is the opponent
+            #         score_minimising_final -= scores[5]
+            # elif 5 in score_1_concatenated:  # if player 1 (minimising player) won
+            #     if self.maximizing_player:
+            #         score_maximising_final -= scores[5]
+            #     elif not self.maximizing_player:
+            #         score_minimising_final += scores[5]
+            # else:
+            #     for value in score_0_concatenated:
+            #         score_maximising_final += scores[value]
+            #     for value in score_1_concatenated:
+            #         score_minimising_final -= scores[value]
+            # if self.maximizing_player:
+            #     return score_maximising_final
+            # elif not self.maximizing_player:
+            #     return score_minimising_final
+            # else:
+            #     return 0
                 

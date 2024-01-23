@@ -113,8 +113,8 @@ Lose rate player 1: 14%
 Test minimax player with a reward function based on the number of pieces on the same row/column/diagonal, depth = 3:
 
 when playing first
-Win rate player 1: 80 %
-Lose rate player 1: 20 %
+Win rate player 1: 86 %
+Lose rate player 1: 14 %
 
 when playing second
 Win rate player 2: 73 %

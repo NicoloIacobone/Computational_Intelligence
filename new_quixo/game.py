@@ -114,8 +114,8 @@ class Game(object):
                     self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
             if human_player:
-                print(f"Player {self.current_player_idx} moved")
-                print(f"Move: {from_pos} {slide}")
+                # print(f"Player {self.current_player_idx} moved")
+                # print(f"Move: {from_pos} {slide}")
                 self.nice_print()
             winner = self.check_winner()        
         return winner

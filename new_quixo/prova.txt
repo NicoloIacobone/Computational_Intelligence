@@ -1,0 +1,7379 @@
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  0
+max_eval:  0 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1  0 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1  0 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1  0 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1  0 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  0 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1  0 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  44  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+move:  ((4, 4), <Move.LEFT: 2>) 	score:  0
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ⬜️ ⬜️ ⬜️ ⬜️ 
+
+⭕️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ⬜️ ⬜️ ⬜️ ⬜️ 
+
+In the state:  [[ 0 -1 -1 -1 -1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  0
+max_eval:  0 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1 -1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1  0 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1  0 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1  0 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1  0 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1  0 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  41  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  42  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+move:  ((4, 4), <Move.LEFT: 2>) 	score:  0
+⭕️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ⬜️ ⬜️ ⬜️ 
+
+⭕️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ⬜️ ⬜️ ⬜️ 
+
+In the state:  [[ 0 -1 -1 -1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  0
+max_eval:  0 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0 -1 -1 -1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1  0 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1  0 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1  0 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1  0 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 0  1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1  0  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  39  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+In the state:  [[ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  0
+max_eval:  0 	best_move:  None
+move:  ((4, 4), <Move.LEFT: 2>) 	score:  0
+⭕️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ❌ ⬜️ ⬜️ 
+
+⭕️ ⬜️ ⬜️ ⭕️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ❌ ⬜️ ⬜️ 
+
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  -157
+max_eval:  0 	best_move:  ((4, 4), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  -157
+max_eval:  -157 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  0]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1  0 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1  0 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1  0 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  0  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  0  1]
+ [-1 -1 -1  1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  40  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+move:  ((4, 4), <Move.LEFT: 2>) 	score:  -157
+⭕️ ⬜️ ⬜️ ⭕️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ❌ ❌ ⬜️ 
+
+⭕️ ⬜️ ⬜️ ⭕️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+❌ ❌ ❌ ❌ ⬜️ 
+
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1 -1  1  1]
+ [ 1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  -157
+max_eval:  0 	best_move:  ((4, 4), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1  0 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0  1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1  1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1  0 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  -157
+max_eval:  -157 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1  0 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  0  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0 -1  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  0  1]
+ [-1 -1 -1  1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1 -1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0 -1  0]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [ 0  0  0  0 -1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+move:  ((4, 4), <Move.TOP: 0>) 	score:  -157
+⭕️ ⬜️ ⬜️ ⭕️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+❌ ❌ ❌ ❌ ⬜️ 
+
+⭕️ ⬜️ ⬜️ ⭕️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⬜️ 
+
+In the state:  [[ 0 -1 -1  1  0]
+ [ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  0
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  0
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 0 -1 -1  1  0]
+ [ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 0 -1 -1  1  0]
+ [ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1  1  1  0]
+ [ 0  0  0  0 -1]]
+There are  36  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  0
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  0
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  0
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  0
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  0
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  0
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 0 -1 -1  1  0]
+ [ 1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [-1  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 4), <Move.LEFT: 2>)
+eval:  -157
+max_eval:  -157 	best_move:  ((4, 4), <Move.LEFT: 2>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0 -1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1  0 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1  0 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0 -1  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0 -1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1  0  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  32  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1  0  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0 -1  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0 -1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  0  0]
+ [-1 -1 -1  1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [ 0  0  0  1 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 1), <Move.TOP: 0>)
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0 -1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0  1 -1 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0 -1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 1 -1 -1  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+move:  ((4, 4), <Move.TOP: 0>) 	score:  -157
+⭕️ ⬜️ ⬜️ ⭕️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⭕️ ⬜️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+⬜️ ⬜️ ⭕️ ❌ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⭕️ ⬜️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  22621 	best_move:  ((4, 3), <Move.BOTTOM: 1>)
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1  1 -1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [-1  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  -157 	best_move:  ((4, 3), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1  0 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1  0  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0 -1  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  0  0  1]
+ [-1 -1  1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0 -1  0  1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [-1 -1 -1  0 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0 -1 -1  1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1 -1]
+ [ 0  0  0  1  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 1), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1 -1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+move:  ((4, 3), <Move.TOP: 0>) 	score:  -157
+⬜️ ⬜️ ⭕️ ❌ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+⬜️ ⬜️ ⭕️ ❌ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⭕️ ❌ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  22621 	best_move:  ((4, 3), <Move.BOTTOM: 1>)
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.RIGHT: 3>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1  1  0  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [-1  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 1), <Move.LEFT: 2>)
+eval:  -157
+move:  ((4, 3), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 3), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((4, 3), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  -157 	best_move:  ((4, 3), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1  0 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1  0  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0 -1  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  0  0  1]
+ [-1 -1  1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0 -1  0  1]]
+There are  37  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [-1 -1 -1  0  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[ 0 -1 -1  1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0  0  0  1  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  1  0]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 1), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -157
+max_eval:  -157 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[-1 -1  1  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  33  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -157
+max_eval:  -157 	best_move:  None
+In the state:  [[-1 -1  1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+move:  ((4, 3), <Move.TOP: 0>) 	score:  -157
+⬜️ ⬜️ ⭕️ ❌ ❌ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+⬜️ ⭕️ ❌ ❌ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ❌ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  22621 	best_move:  ((4, 2), <Move.BOTTOM: 1>)
+In the state:  [[ 1  0  0  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -314
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 0), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((3, 4), <Move.LEFT: 2>)
+In the state:  [[ 0  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -314
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -314
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -314
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 1), <Move.TOP: 0>)
+eval:  -314
+move:  ((4, 1), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 1), <Move.TOP: 0>)
+In the state:  [[ 0  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  0  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[ 0  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [ 0 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1  1  1  0]
+ [ 0  0  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -314
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -314
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -314
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -157
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -157
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -157
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -157
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -157
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  22621
+max_eval:  22621 	best_move:  ((4, 2), <Move.TOP: 0>)
+In the state:  [[ 0  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [-1  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((3, 0), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -1885
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -1885
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -1885
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -1885
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  -1885
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -1885
+max_eval:  -1885 	best_move:  ((4, 2), <Move.LEFT: 2>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  1  0]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  0  0  0  1]
+ [-1  1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0 -1  0  0  1]]
+There are  34  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((0, 1), <Move.TOP: 0>)
+eval:  -2042
+move:  ((0, 1), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 1), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((0, 2), <Move.TOP: 0>)
+eval:  -2042
+move:  ((0, 2), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 2), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((0, 3), <Move.TOP: 0>)
+eval:  -2042
+move:  ((0, 3), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((0, 3), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((0, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((0, 4), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((1, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((1, 0), <Move.LEFT: 2>)
+eval:  -2042
+move:  ((1, 0), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((1, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((1, 4), <Move.LEFT: 2>)
+eval:  -2042
+move:  ((1, 4), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((2, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((2, 0), <Move.LEFT: 2>)
+eval:  -2042
+move:  ((2, 0), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((2, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((2, 4), <Move.LEFT: 2>)
+eval:  -2042
+move:  ((2, 4), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((3, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((3, 0), <Move.LEFT: 2>)
+100%|██████████| 1/1 [00:02<00:00,  2.61s/it]
+eval:  -2042
+move:  ((3, 0), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((3, 4), <Move.TOP: 0>)
+eval:  -2042
+move:  ((3, 4), <Move.LEFT: 2>)
+eval:  -2042
+move:  ((3, 4), <Move.RIGHT: 3>)
+eval:  -2042
+move:  ((4, 2), <Move.TOP: 0>)
+eval:  -2042
+move:  ((4, 2), <Move.BOTTOM: 1>)
+eval:  -2042
+move:  ((4, 2), <Move.LEFT: 2>)
+eval:  -2042
+max_eval:  -2042 	best_move:  ((4, 2), <Move.LEFT: 2>)
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  1  0]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1 -1  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1  0  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1  0 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0 -1  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  1  0]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  0]
+ [-1 -1 -1  0  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -22621
+move:  ((0, 0), <Move.RIGHT: 3>)
+eval:  -1885
+max_eval:  -1885 	best_move:  ((0, 0), <Move.BOTTOM: 1>)
+In the state:  [[ 0 -1  1  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  1  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1  0  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1 -1  1]
+ [ 0  0  0  1  1]]
+There are  28  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  0]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  1  0]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -1885
+max_eval:  -1885 	best_move:  None
+In the state:  [[-1  1  0  0  0]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1 -1  1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  30  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+In the state:  [[-1  1  0  0  1]
+ [-1 -1 -1 -1  1]
+ [ 0 -1 -1 -1 -1]
+ [-1 -1 -1  1  1]
+ [ 0  0  0  0  1]]
+There are  31  available moves
+----------------------------------------------
+move:  ((0, 0), <Move.BOTTOM: 1>)
+eval:  -2042
+max_eval:  -2042 	best_move:  None
+move:  ((4, 2), <Move.LEFT: 2>) 	score:  -2042
+⬜️ ⭕️ ❌ ❌ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+❌ ⬜️ ⬜️ ⬜️ ⬜️ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⭕️ 
+
+⬜️ ⭕️ ❌ ❌ ⭕️ 
+⬜️ ⬜️ ⬜️ ⬜️ ⭕️ 
+❌ ⬜️ ⬜️ ⬜️ ⭕️ 
+⬜️ ⬜️ ⬜️ ⭕️ ⭕️ 
+❌ ❌ ❌ ❌ ⭕️ 
