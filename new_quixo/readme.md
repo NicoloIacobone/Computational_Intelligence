@@ -90,4 +90,34 @@ Win rate player 1: 85.1%
 Lose rate player 1: 14.899999999999999%
 Draw rate: 0.0%
 Average trajectory size: 16.0
+Entries: 43456202
 Policy size: 2,69GB
+
++1kk episodes:
+Win rate player 1: 86.6%
+Lose rate player 1: 13.4%
+Draw rate: 0.0%
+Average trajectory size: 49.0
+Entries: 54060575
+Policy size: 3.35 GB
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test minimax player with a simple reward function (win = +1, lose = -1, draw = 0), depth = 3:
+Win rate player 1: 86%
+Lose rate player 1: 14%
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Test minimax player with a reward function based on the number of pieces on the same row/column/diagonal, depth = 3:
+
+when playing first
+Win rate player 1: 80 %
+Lose rate player 1: 20 %
+
+when playing second
+Win rate player 2: 73 %
+Lose rate player 2: 27 %
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------

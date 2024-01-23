@@ -163,4 +163,9 @@ class Utils:
         print(f"Entries: {len(player_to_evaluate.value_dictionary)}") # print the number of entries in the dictionary
 
         if policy is not None:
-            print(f"Policy size: {player_to_evaluate.get_policy_size(policy)/1_000_000:.2f} MB") # print the size of the policy in MB
+            policy_size = player_to_evaluate.get_policy_size(policy)
+            if policy_size >= 1_000_000_000:
+                print(f"Policy size: {policy_size/1_000_000_000:.2f} GB") # print the size of the policy in GB
+            else:
+                print(f"Policy size: {policy_size/1_000_000_000:.2f} GB") # print the size of the policy in MB
+            

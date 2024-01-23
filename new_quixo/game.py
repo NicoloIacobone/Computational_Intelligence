@@ -101,7 +101,7 @@ class Game(object):
 
         print(board_str)
 
-    def play(self, player1: Player, player2: Player) -> int:
+    def play(self, player1: Player, player2: Player, human_player : bool = False) -> int:
         '''Play the game. Returns the winning player'''
         players = [player1, player2]
         winner = -1
@@ -113,10 +113,11 @@ class Game(object):
                 from_pos, slide = players[self.current_player_idx].make_move(
                     self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
-            # self.nice_print()
-            winner = self.check_winner()
-            # self.nice_print()
-        
+            if human_player:
+                print(f"Player {self.current_player_idx} moved")
+                print(f"Move: {from_pos} {slide}")
+                self.nice_print()
+            winner = self.check_winner()        
         return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:

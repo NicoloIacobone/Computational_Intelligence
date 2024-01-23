@@ -242,16 +242,18 @@ class ReinforcementPlayer(Player):
 #         pass
 
 class MinimaxPlayer(Player):
-    def __init__(self, depth : int = 3) -> None:
+    def __init__(self, depth : int = 3, eval_function : int = 2, maximizing_player : bool = True) -> None:
         super().__init__()
         self.depth = depth
+        self.eval_function = eval_function
+        self.maximizing_player = maximizing_player
 
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
-        value, move = self.minimax(game, self.depth, float('-inf'), float('inf'), True)
+        _, move = self.minimax(game, self.depth, float('-inf'), float('inf'), self.maximizing_player)
         # print("value: ", value)
         # print("move: ", move)
         return move
-
+        
     def minimax(self, state : Game, depth : int, alpha : float, beta : float, maximizing_player : bool):
         # print("depth: ", depth)
         # print("alpha: ", alpha)
@@ -281,6 +283,8 @@ class MinimaxPlayer(Player):
                 eval, _ = self.minimax(child_state, depth - 1, alpha, beta, False) # get the value of the state
                 # print("eval: ", eval)
 
+                if eval is None:
+                    print("eval is None, maximising")
                 max_eval = max(max_eval, eval) # get the maximum value
                 # print("max_eval: ", max_eval)
 
@@ -288,19 +292,11 @@ class MinimaxPlayer(Player):
                 # print("alpha: ", alpha)
 
                 if beta <= alpha:
-                    # print("beta <= alpha")
                     break
 
                 # check if the current move is the best move
                 if max_eval == eval:
                     best_move = move
-
-                # print("best_move: ", best_move)
-                # print("--------------------------------------------")
-                
-            # print("return max_eval: ", max_eval)
-            # print("return best_move: ", best_move)
-            # print("--------------------------------------------")
 
             return max_eval, best_move
         
@@ -318,6 +314,11 @@ class MinimaxPlayer(Player):
                 eval, _ = self.minimax(child_state, depth - 1, alpha, beta, True)
                 # print("eval: ", eval)
 
+                if eval is None:
+                    print("eval is None, minimising")
+
+                # print("min_eval: ", min_eval)
+                # print("eval: ", eval)
                 min_eval = min(min_eval, eval)
                 # print("min_eval: ", min_eval)
 
@@ -346,13 +347,96 @@ class MinimaxPlayer(Player):
         available_moves = test_board.compute_available_moves() # call the function that computes all possible moves
         return available_moves # return the list of available moves
 
-    def evaluate(self, game):
-        # The simplest evaluation function is to give a positive value to a winning position and a negative value to a losing position.
-        if game.check_winner() == 0:
-            return 1
-        elif game.check_winner() == 1:
-            return -1
-        else:
-            return 0
-                
+    def evaluate(self, game : Game):
+        if self.eval_function == 1:
+            # The simplest evaluation function is to give a positive value to a winning position and a negative value to a losing position.
+            if game.check_winner() == 0:
+                return 1
+            elif game.check_winner() == 1:
+                return -1
+            else:
+                return 0
+            
+        elif self.eval_function == 2:
+            # A more sophisticated evaluation function is to give a score based on the number of pieces on winning lines
+            board = game._board
+
+            score_0_row = [0, 0, 0, 0, 0]
+            score_1_row = [0, 0, 0, 0, 0]
+            score_0_col = [0, 0, 0, 0, 0]
+            score_1_col = [0, 0, 0, 0, 0]
+            score_0_diag = [0, 0]
+            score_1_diag = [0, 0]
+
+            for i in range(5):
+                for j in range(5):
+                    if board[i][j] == 0:
+                        score_0_row[i] += 1
+                        score_0_col[j] += 1
+                    elif board[i][j] == 1:
+                        score_1_row[i] += 1
+                        score_1_col[j] += 1
+
+                    if i == j: # on the first diagonal
+                        if board[i][j] == 0:
+                            score_0_diag[0] += 1
+                        elif board[i][j] == 1:
+                            score_1_diag[0] += 1
+
+                    if i + j == 4: # on the second diagonal
+                        if board[i][j] == 0:
+                            score_0_diag[1] += 1
+                        elif board[i][j] == 1:
+                            score_1_diag[1] += 1
+
+            score_0_concatenated = score_0_row + score_0_col + score_0_diag
+            score_1_concatenated = score_1_row + score_1_col + score_1_diag
+
+
+            score_maximising_final = 0
+            score_minimising_final = 0
+
+            if 5 in score_0_concatenated:  # if player 0 (maximising player) won
+                if self.maximizing_player: # if it is the current player
+                    score_maximising_final += 22621
+                elif not self.maximizing_player: # if it is the opponent
+                    score_minimising_final -= 22621
+            elif 5 in score_1_concatenated:  # if player 1 (minimising player) won
+                if self.maximizing_player:
+                    score_maximising_final -= 22621
+                elif not self.maximizing_player:
+                    score_minimising_final += 22621
+            else:
+                for value in score_0_concatenated:
+                    if value == 4:
+                        score_maximising_final += 1885 # maximising player gets a positive score = advantage
+                        score_minimising_final += 1885 # minimising player gets a positive score = disadvantage
+                    elif value == 3:
+                        score_maximising_final += 157
+                        score_minimising_final += 157
+                    elif value == 2:
+                        score_maximising_final += 13
+                        score_minimising_final += 13
+                    elif value == 1:
+                        score_maximising_final += 1
+                        score_minimising_final += 1
+                for value in score_1_concatenated:
+                    if value == 4:
+                        score_minimising_final -= 1885 # minimising player gets a negative score = advantage
+                        score_maximising_final -= 1885 # maximising player gets a negative score = disadvantage
+                    elif value == 3:
+                        score_minimising_final -= 157
+                        score_maximising_final -= 157
+                    elif value == 2:
+                        score_minimising_final -= 13
+                        score_maximising_final -= 13
+                    elif value == 1:
+                        score_minimising_final -= 1
+                        score_maximising_final -= 1
+            if self.maximizing_player:
+                return score_maximising_final
+            elif not self.maximizing_player:
+                return score_minimising_final
+            else:
+                return 0
                 
