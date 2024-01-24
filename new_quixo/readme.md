@@ -103,21 +103,66 @@ Policy size: 3.35 GB
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+eval_function = 1
+A simple reward function (win = +1, lose = -1, draw = 0)
 
-Test minimax player with a simple reward function (win = +1, lose = -1, draw = 0), depth = 3:
+depth = 3:
 Win rate player 1: 86%
 Lose rate player 1: 14%
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+eval_function = 2
+A reward function based on the number of pieces on the same row/column/diagonal
 
-Test minimax player with a reward function based on the number of pieces on the same row/column/diagonal, depth = 3:
-
+depth = 3:
 when playing first
 Win rate player 1: 86 %
 Lose rate player 1: 14 %
 
 when playing second
-Win rate player 2: 73 %
-Lose rate player 2: 27 %
+Win rate player 2: 79%
+Lose rate player 2: 21%
+
+depth = 4:
+
+when playing first
+Win rate player 1: 99%
+Lose rate player 1: 1%
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+eval_function = 3
+A reward function based on the number of pieces on the same row/column/diagonal, with a bonus for a faster win
+
+depth = 3
+Win rate player 1: 95%
+Lose rate player 1: 5 %
+
+Win rate player 2: 95 %
+Lose rate player 2: 5 %
+
+depth = 4
+Win rate player 1: 99%
+Lose rate player 1: 1%
+
+Win rate player 2: 98%
+Lose rate player 2: 2%
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+eval_function = 4
+A reward function based on the number of pieces on the same row/column/diagonal, with a bonus for a faster win and that takes into account the number of pieces owned by the player
+
+depth = 3
+Win rate player 1: 96%
+Lose rate player 1: 4 %
+
+Win rate player 2: 90%
+Lose rate player 2: 10 %
+
+depth = 4
+Win rate player 1: 96%
+Lose rate player 1: 4%
+
+Win rate player 2: 95%
+Lose rate player 2: 5%
