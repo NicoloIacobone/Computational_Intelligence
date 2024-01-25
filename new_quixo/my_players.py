@@ -33,21 +33,16 @@ class ReinforcementPlayer(Player):
         self.random_move = random_move # a value between 0 and 1, used to choose a random move when training, to favor exploration
         self.trajectory = [] # list of states visited during the training phase
         self.neutral_moves = [] # list of available moves in a given state
-        # self.winning_moves = [] # list of winning moves in a given state
-        # self.losing_moves = [] # list of losing moves in a given state
 
     def compute_available_moves(self, game: Game):
         ''' Compute all possible moves in this state '''
         # reset the old list of available moves
         self.neutral_moves = []
-        # self.winning_moves = []
-        # self.losing_moves = []
 
         # create a new board to test the moves
         test_board = MyGame(game)
 
         # call the function that computes all possible moves
-        # self.neutral_moves, self.winning_moves, self.losing_moves = test_board.compute_available_moves()
         self.neutral_moves = test_board.compute_available_moves()
 
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
@@ -56,9 +51,6 @@ class ReinforcementPlayer(Player):
         never_visited = True # flag to check if the state was never visited
         self.compute_available_moves(game) # compute all possible moves in the current state
 
-        # if len(self.winning_moves) > 0: # if there is a winning move
-        #     best_move = random.choice(self.winning_moves)
-        # else:
         if random.random() < self.random_move: # if a random number is lower than the random_move value
             best_move = random.choice(self.neutral_moves) # choose a random move to do exploration
         else: # otherwise do exploitation
@@ -198,21 +190,19 @@ class ReinforcementPlayer(Player):
 
 
 class MinimaxPlayer(Player):
-    def __init__(self, depth : int = 3, eval_function : int = 0, maximizing_player : bool = True) -> None:
+    def __init__(self, max_depth : int = 3, eval_function : int = 0) -> None:
         super().__init__()
-        self.depth = depth
         self.eval_function = eval_function
-        self.maximizing_player = maximizing_player
-        self.max_depth = 3
+        self.max_depth = max_depth
         self.player_index = None
 
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
         if self.player_index is None:
             self.player_index = game.current_player_idx
-        _, move = self.fil_minimax(game)
+        _, move = self.minimax(game)
         return move
     
-    def fil_minimax(self, state: Game):
+    def minimax(self, state: Game):
         best_eval = float('-inf')
         alpha = float('-inf')
         beta = float('inf')
@@ -227,7 +217,7 @@ class MinimaxPlayer(Player):
             _ = state._Game__move(from_pos, slide, state.current_player_idx)
             state.current_player_idx += 1
             state.current_player_idx %= 2
-            child_eval = self.min_value(state, alpha, beta, 1)
+            child_eval = self.child_min(state, alpha, beta, 1)
             state._board = prev_board.copy()
             state.current_player_idx = prev_player
             if child_eval > best_eval:
@@ -238,7 +228,7 @@ class MinimaxPlayer(Player):
 
         return best_eval, best_move
     
-    def min_value(self, state: Game, alpha : float, beta : float, depth : int):
+    def child_min(self, state: Game, alpha : float, beta : float, depth : int):
         winner = state.check_winner()
 
         if winner != -1:
@@ -260,7 +250,7 @@ class MinimaxPlayer(Player):
             _ = state._Game__move(from_pos, slide, state.current_player_idx)
             state.current_player_idx += 1
             state.current_player_idx %= 2
-            child_eval = self.max_value(state, alpha, beta, depth + 1)
+            child_eval = self.child_max(state, alpha, beta, depth + 1)
             best_eval = min(best_eval, child_eval)
             state._board = prev_board.copy()
             state.current_player_idx = prev_player
@@ -272,7 +262,7 @@ class MinimaxPlayer(Player):
             
         return best_eval
     
-    def max_value(self, state: Game, alpha : float, beta : float, depth : int):
+    def child_max(self, state: Game, alpha : float, beta : float, depth : int):
         winner = state.check_winner()
         if winner != -1:
             if winner == self.player_index:
@@ -293,7 +283,7 @@ class MinimaxPlayer(Player):
             _ = state._Game__move(from_pos, slide, state.current_player_idx)
             state.current_player_idx += 1
             state.current_player_idx %= 2
-            child_eval = self.min_value(state, alpha, beta, depth + 1)
+            child_eval = self.child_min(state, alpha, beta, depth + 1)
             best_eval = max(best_eval, child_eval)
             state._board = prev_board.copy()
             state.current_player_idx = prev_player
@@ -525,258 +515,4 @@ class MinimaxPlayer(Player):
                     score_1_final += scores[value] # subtract the score of the element to the final score
 
                 return score_1_final - depth + pieces_1 # return the score for player 1
-        
-    # def minimax(self, state : Game, depth : int, alpha : float, beta : float, maximizing_player : bool):
-    #     winner = state.check_winner()
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-        
-    #     available_moves = self.compute_available_moves(state)
-
-    #     # shuffle the moves to avoid always choosing the same patterns 
-    #     # random.shuffle(available_moves)
-
-    #     if maximizing_player:
-    #         max_eval = float('-inf')
-    #         best_move = None
-            
-
-    #         for move in available_moves: # for each possible move --> in minimax lingo, this is "for each child of position"
-    #             child_state = MyGame(state) # create a new board to test the moves
-    #             from_pos, slide = move # get the move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx) # apply the move = create a new state
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, False) # get the value of the state
-
-    #             max_eval = max(max_eval, eval) # get the maximum value
-
-    #             alpha = max(alpha, eval) # update alpha
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if max_eval == eval:
-    #                 best_move = move
-    #         return max_eval, best_move
-        
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         for move in available_moves:
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, True)
- 
-
-    #             min_eval = min(min_eval, eval)
-
-    #             beta = min(beta, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if min_eval == eval:
-    #                 best_move = move
-    #         return min_eval, best_move
-
-    
-
-    # def minimax(self, state : Game, depth : int, alpha : float, beta : float, maximizing_player : bool):
-    #     winner = state.check_winner()
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-
-    #     if maximizing_player:
-    #         max_eval = float('-inf')
-    #         best_move = None
-
-    #         test_board = MyGame(state) # create a new board to test the moves
-    #         original_board = test_board._board.copy() # save the old board to restore it after testing a move
-    #         original_player = test_board.current_player_idx # save the old player to restore it after testing a move
-
-    #         for row in range(5): # for each row
-    #             for col in range(5): # for each column
-    #                 if row == 0 or row == 4 or col == 0 or col == 4: # if the cell is on the border
-    #                     for move in Move: # for each possible move
-    #                         possible_move = test_board.make_move(row, col, move) # test the move
-    #                         if possible_move: # if the move is possible test_board has the applied move
-
-    #                             eval, _ = self.minimax(test_board, depth - 1, alpha, beta, False) # get the value of the state
-
-    #                             max_eval = max(max_eval, eval) # get the maximum value
-
-    #                             alpha = max(alpha, eval) # update alpha
-
-    #                             if beta <= alpha:
-    #                                 break
-
-    #                             # check if the current move is the best move
-    #                             if max_eval == eval:
-    #                                 best_move = (row, col), move
-
-    #                             test_board._board = original_board.copy() # restore the old board after testing a move
-    #                             test_board.current_player_idx = original_player # restore the old player after testing a move
-
-    #         return max_eval, best_move
-        
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         test_board = MyGame(state) # create a new board to test the moves
-    #         original_board = test_board._board.copy() # save the old board to restore it after testing a move
-    #         original_player = test_board.current_player_idx # save the old player to restore it after testing a move
-
-    #         for row in range(5): # for each row
-    #             for col in range(5): # for each column
-    #                 if row == 0 or row == 4 or col == 0 or col == 4: # if the cell is on the border
-    #                     for move in Move: # for each possible move
-    #                         possible_move = test_board.make_move(row, col, move) # test the move
-    #                         if possible_move: # if the move is possible test_board has the applied move
-
-    #                             eval, _ = self.minimax(test_board, depth - 1, alpha, beta, True)
-                
-    #                             min_eval = min(min_eval, eval)
-
-    #                             beta = min(beta, eval)
-
-    #                             if beta <= alpha:
-    #                                 break
-
-    #                             # check if the current move is the best move
-    #                             if min_eval == eval:
-    #                                 best_move = (row, col), move
-
-    #                             test_board._board = original_board.copy() # restore the old board after testing a move
-    #                             test_board.current_player_idx = original_player # restore the old player after testing a move
-
-    #         return min_eval, best_move
-
-    
-
-    # def myminimax(self, state, alpha, beta, depth, maximizing_player):
-        
-    #     winner = state.check_winner()
-
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-
-    #     if maximizing_player:
-    #         max_eval = float('-inf')
-    #         best_move = None
-
-    #         available_moves = self.compute_available_moves(state)
-
-    #         for move in available_moves:
-
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.myminimax(child_state, depth - 1, alpha, beta, False)
-
-    #             max_eval = max(max_eval, eval)
-
-    #             alpha = max(alpha, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if max_eval == eval:
-    #                 best_move = move
-    #         return max_eval, best_move
-        
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         available_moves = self.compute_available_moves(state)
-
-    #         for move in available_moves:
-
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.myminimax(child_state, depth - 1, alpha, beta, True)
-
-    #             min_eval = min(min_eval, eval)
-
-    #             beta = min(beta, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if min_eval == eval:
-    #                 best_move = move
-    #         return min_eval, best_move
-                
-                # def minimax(self, state: Game, depth: int, alpha : float, beta : float, maximizing_player: bool):
-    #     winner = state.check_winner()
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-
-    #     available_moves = self.compute_available_moves(state)
-
-    #     if maximizing_player:
-
-    #         max_eval = float('-inf')
-    #         best_move = None
-
-    #         for move in available_moves:
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, False)
-
-    #             max_eval = max(max_eval, eval)
-
-    #             alpha = max(alpha, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if max_eval == eval:
-    #                 best_move = move
-    #         return max_eval, best_move
-
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         for move in available_moves:
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, True)
-
-    #             min_eval = min(min_eval, eval)
-
-    #             beta = min(beta, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if min_eval == eval:
-    #                 best_move = move
-    #         return min_eval, best_move
                     

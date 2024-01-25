@@ -28,12 +28,11 @@ if __name__ == '__main__':
     random_player = RandomPlayer()
     reinforcement_player = ReinforcementPlayer()
     reinforcement_player.set_random_move(0.9)
-
-    # reinforcement_player.load_policy("no_decr_1kk_1_1")
+    reinforcement_player.load_policy("/policies/test_policy_1")
 
     environment = Utils()
 
-    environment.train(reinforcement_player, random_player, 500_000, 100, -100, decreasing_exp_rate=True)
+    environment.train(reinforcement_player, random_player, 1_000_000, 100, -100, decreasing_exp_rate=True)
     environment.test(reinforcement_player, random_player)
     # reinforcement_player.policy_to_txt()
 
