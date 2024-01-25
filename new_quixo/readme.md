@@ -166,3 +166,94 @@ Lose rate player 1: 4%
 
 Win rate player 2: 95%
 Lose rate player 2: 5%
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Minimax agent is nice, I obtained good win rates. 
+It is too slow, I need to find a way to speed it up.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+When calling the function to compute the available moves i then iterate over all moves, apply them and call the evaluation function. When applying the move inside the for loop I basically do a repetition of what is being done in the compute available moves function, except for the fact that the old board is restored. I can create a single function that, when the move is valid, applies it and returns the new board. 
+
+before: 4:30min
+after : 07:46min
+
+I'll keep the old version.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Tried another approach for minimax player, now it works. Even with the easiest eval function it pefrorms 100% win against random agent, both playing first and second.
+(It was a lie, it was setted the fourth eval function)
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Up to now I will only calculate which minimax is faster to reach a winning state, I will calculate the average lenght of a match over 100 matches, with depth = 3.
+
+eval_function = 1 (simple reward function)
+playing first: 11.7
+playing second: 21.04
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Starting testing the minimax agent with depth = 3:
+
+Eval function: 0
+Player playing FIRST
+Minimax won 82 games out of 100
+Average game length: 42.01
+
+Eval function: 0
+Player playing SECOND
+Minimax won 70 games out of 100
+Average game length: 52.41
+
+------------------------------------------------------------------------
+
+Eval function: 1
+Player playing FIRST
+Minimax won 100 games out of 100
+Average game length: 14.09
+
+Eval function: 1
+Player playing SECOND
+Minimax won 99 games out of 100
+Average game length: 16.48
+
+------------------------------------------------------------------------
+
+Eval function: 2
+Player playing FIRST
+Minimax won 100 games out of 100
+Average game length: 12.27
+
+Eval function: 2
+Player playing SECOND
+Minimax won 100 games out of 100
+Average game length: 15.55
+
+------------------------------------------------------------------------
+
+Eval function: 3
+Player playing FIRST
+Minimax won 100 games out of 100
+Average game length: 12.01
+
+Eval function: 3
+Player playing SECOND
+Minimax won 99 games out of 100
+Average game length: 16.02
+
+------------------------------------------------------------------------
+
+Eval function: 4
+Player playing FIRST
+Minimax won 100 games out of 100
+Average game length: 11.28
+
+Eval function: 4
+Player playing SECOND
+Minimax won 100 games out of 100
+Average game length: 13.36
+
+------------------------------------------------------------------------

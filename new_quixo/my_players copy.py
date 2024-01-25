@@ -198,112 +198,79 @@ class ReinforcementPlayer(Player):
 
 
 class MinimaxPlayer(Player):
-    def __init__(self, depth : int = 3, eval_function : int = 0, maximizing_player : bool = True) -> None:
+    def __init__(self, depth : int = 3, eval_function : int = 1, maximizing_player : bool = True) -> None:
         super().__init__()
         self.depth = depth
         self.eval_function = eval_function
         self.maximizing_player = maximizing_player
-        self.max_depth = 3
-        self.player_index = None
+        # self.diary = []
 
     def make_move(self, game: Game) -> tuple[tuple[int, int], Move]:
-        if self.player_index is None:
-            self.player_index = game.current_player_idx
-        _, move = self.fil_minimax(game)
+        # _, move = self.minimax(game, self.depth, float('-inf'), float('inf'), self.maximizing_player)
+        # self.diary.append("Calling minimax with " + str(self.maximizing_player) + " and depth " + str(self.depth))
+        _, move = self.minimax(game, self.depth, self.maximizing_player)
         return move
     
-    def fil_minimax(self, state: Game):
-        best_eval = float('-inf')
-        alpha = float('-inf')
-        beta = float('inf')
+    def minimax(self, state: Game, depth: int, maximizing_player: bool):
+        winner = state.check_winner()
+        if depth == 0 or winner != -1:
+            toreturn = self.evaluate(state, winner, depth)
+            # self.diary.append("Returning " + str(toreturn) + " with " + str(self.maximizing_player) + " depth " + str(self.depth) + " and winner " + str(winner))
+            return toreturn, None
 
         available_moves = self.compute_available_moves(state)
-        best_move = random.choice(available_moves)
 
-        for move in available_moves:
-            from_pos, slide = move
-            prev_board = state._board.copy()
-            prev_player = state.current_player_idx
-            _ = state._Game__move(from_pos, slide, state.current_player_idx)
-            state.current_player_idx += 1
-            state.current_player_idx %= 2
-            child_eval = self.min_value(state, alpha, beta, 1)
-            state._board = prev_board.copy()
-            state.current_player_idx = prev_player
-            if child_eval > best_eval:
-                best_eval = child_eval
-                best_move = move
+        if maximizing_player:
 
-            alpha = max(alpha, best_eval)
+            max_eval = float('-inf')
+            best_move = None
 
-        return best_eval, best_move
-    
-    def min_value(self, state: Game, alpha : float, beta : float, depth : int):
-        winner = state.check_winner()
+            for move in available_moves:
+                child_state = MyGame(state)
+                from_pos, slide = move
+                # self.diary.append("checking move " + str(from_pos) + " " + str(slide))
+                _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
+                child_state.current_player_idx += 1
+                child_state.current_player_idx %= 2
+                # print("evaluating\tmove: ", move)
 
-        if winner != -1:
-            if winner == self.player_index:
-                return 999999
-            else:
-                return -999999
+                eval, _ = self.minimax(child_state, depth - 1, False)
+                # self.diary.append("move: " + str(move) + "\teval: " + str(eval))
+                # print("maximising\tmove: ", move, "\teval: ", eval)
 
-        if depth == self.max_depth:
-            return self.evaluate(state, winner, depth)
-        
-        best_eval = float('inf')
-        possible_moves = self.compute_available_moves(state)
+                max_eval = max(max_eval, eval)
+                # self.diary.append("max_eval: " + str(max_eval) + " eval: " + str(eval))
 
-        for move in possible_moves:
-            from_pos, slide = move
-            prev_board = state._board.copy()
-            prev_player = state.current_player_idx
-            _ = state._Game__move(from_pos, slide, state.current_player_idx)
-            state.current_player_idx += 1
-            state.current_player_idx %= 2
-            child_eval = self.max_value(state, alpha, beta, depth + 1)
-            best_eval = min(best_eval, child_eval)
-            state._board = prev_board.copy()
-            state.current_player_idx = prev_player
+                # check if the current move is the best move
+                if max_eval == eval:
+                    # self.diary.append("best move changed from " + str(best_move) + " to " + str(move))
+                    best_move = move
+            # print("max_eval: ", max_eval)
+            # print("best_move: ", best_move)
+            # self.diary.append("Returning " + str(max_eval) + " with " + str(self.maximizing_player) + " depth " + str(self.depth) + " and winner " + str(winner))
+            return max_eval, best_move
 
-            beta = min(beta, best_eval)
+        else:
+            min_eval = float('inf')
+            best_move = None
 
-            if beta <= alpha:
-                break
-            
-        return best_eval
-    
-    def max_value(self, state: Game, alpha : float, beta : float, depth : int):
-        winner = state.check_winner()
-        if winner != -1:
-            if winner == self.player_index:
-                return 999999
-            else:
-                return -999999
+            for move in available_moves:
+                child_state = MyGame(state)
+                from_pos, slide = move
+                _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
+                child_state.current_player_idx += 1
+                child_state.current_player_idx %= 2
+                # print("evaluating\tmove: ", move)
 
-        if depth == self.max_depth:
-            return self.evaluate(state, winner, depth)
-        
-        best_eval = float('-inf')
-        possible_moves = self.compute_available_moves(state)
+                eval, _ = self.minimax(child_state, depth - 1, True)
+                # print("minimizing\tmove: ", move, "\teval: ", eval)
 
-        for move in possible_moves:
-            from_pos, slide = move
-            prev_board = state._board.copy()
-            prev_player = state.current_player_idx
-            _ = state._Game__move(from_pos, slide, state.current_player_idx)
-            state.current_player_idx += 1
-            state.current_player_idx %= 2
-            child_eval = self.min_value(state, alpha, beta, depth + 1)
-            best_eval = max(best_eval, child_eval)
-            state._board = prev_board.copy()
-            state.current_player_idx = prev_player
+                min_eval = min(min_eval, eval)
 
-            alpha = max(alpha, best_eval)
-
-            if beta <= alpha:
-                break
-            
-        return best_eval
+                # check if the current move is the best move
+                if min_eval == eval:
+                    best_move = move
+            return min_eval, best_move
 
     def compute_available_moves(self, game: Game):
         ''' Compute all possible moves in this state '''
@@ -312,26 +279,25 @@ class MinimaxPlayer(Player):
         return available_moves # return the list of available moves
     
     def evaluate(self, game : Game, winner : int, depth : int = 0):
-        if self.eval_function == 0:
+        if self.eval_function == 1:
             # The simplest evaluation function is to give a positive value to a winning position and a negative value to a losing position.
-            return 0
-        
-        elif self.eval_function == 1:
-            # A slightly more sophisticated evaluation function is to give a score based on the number of pieces owned on the board
-            caselle_X = 0
-            caselle_O = 0
-
-            for i in range(5):
-                for j in range(5):
-                    if game._board[i][j] == 0:
-                        caselle_X += 1
-                    elif game._board[i][j] == 1:
-                        caselle_O += 1
-
-            if self.player_index == 0:
-                return caselle_X
+            if winner == 0:
+                return 99999999
+            elif winner == 1:
+                return -99999999
             else:
-                return caselle_O
+                return 0
+                # caselle_X = 0
+                # caselle_O = 0
+
+                # for i in range(5):
+                #     for j in range(5):
+                #         if game._board[i][j] == 0:
+                #             caselle_X += 1
+                #         elif game._board[i][j] == 1:
+                #             caselle_O += 1
+
+                # return caselle_X - caselle_O
             
         elif self.eval_function == 2:
             # A more sophisticated evaluation function is to give a score based on the number of pieces on winning lines
@@ -343,120 +309,118 @@ class MinimaxPlayer(Player):
             # scores[i] = scores[i - 1] * 12 + 1 for i > 1 where 12 is the size of score_n_concatenated
             # I chose this to be sure that, even in an impossible worse case, the importance of having a single line of length x is always greater than having all lines of length x - 1
 
-            board = game._board # get the board
+            if winner == 0:
+                return scores[5]
+            elif winner == 1:
+                return -scores[5]
+            else:
+                board = game._board # get the board
 
-            if self.player_index == 0:
                 score_0_row = [0, 0, 0, 0, 0] # for player 0, the number of elements on each row
+                score_1_row = [0, 0, 0, 0, 0] # for player 1, the number of elements on each row
                 score_0_col = [0, 0, 0, 0, 0] # for player 0, the number of elements on each column
+                score_1_col = [0, 0, 0, 0, 0] # for player 1, the number of elements on each column
                 score_0_diag = [0, 0] # for player 0, the number of elements on each diagonal
+                score_1_diag = [0, 0] # for player 1, the number of elements on each diagonal
 
                 for i in range(5): # for each row
                     for j in range(5): # for each column
                         if board[i][j] == 0: # if the element is 0
                             score_0_row[i] += 1 # increase the number of elements on the i-th row
                             score_0_col[j] += 1 # increase the number of elements on the j-th column
-
-                            if i == j: # on the first diagonal
-                                score_0_diag[0] += 1
-
-                            if i + j == 4: # on the second diagonal
-                                score_0_diag[1] += 1
-
-                score_0_concatenated = score_0_row + score_0_col + score_0_diag # concatenate the lists of rows, columns and diagonals for player 0
-                score_0_final = 0 # initialize the score for player 0
-
-                for value in score_0_concatenated: # for each element in the list of rows, columns and diagonals for player 0
-                    score_0_final += scores[value] # add the score of the element to the final score
-
-                return score_0_final # return the score for player 0
-            
-            else:
-                score_1_row = [0, 0, 0, 0, 0] # for player 1, the number of elements on each row
-                score_1_col = [0, 0, 0, 0, 0] # for player 1, the number of elements on each column 
-                score_1_diag = [0, 0] # for player 1, the number of elements on each diagonal
-
-                for i in range(5): # for each row
-                    for j in range(5): # for each column
-                        if board[i][j] == 1: # if the element is 1
+                        elif board[i][j] == 1: # if the element is 1
                             score_1_row[i] += 1 # increase the number of elements on the i-th row
                             score_1_col[j] += 1 # increase the number of elements on the j-th column
 
-                            if i == j: # on the first diagonal
+                        if i == j: # on the first diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[0] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[0] += 1
 
-                            if i + j == 4: # on the second diagonal
+                        if i + j == 4: # on the second diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[1] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[1] += 1
 
+                score_0_concatenated = score_0_row + score_0_col + score_0_diag # concatenate the lists of rows, columns and diagonals for player 0
                 score_1_concatenated = score_1_row + score_1_col + score_1_diag # concatenate the lists of rows, columns and diagonals for player 1
-                score_1_final = 0 # initialize the score for player 1
 
+                score_maximising_final = 0 # initialize the score for player 0
+                score_minimising_final = 0 # initialize the score for player 1
+
+                for value in score_0_concatenated: # for each element in the list of rows, columns and diagonals for player 0
+                    score_maximising_final += scores[value] # add the score of the element to the final score
                 for value in score_1_concatenated: # for each element in the list of rows, columns and diagonals for player 1
-                    score_1_final += scores[value] # subtract the score of the element to the final score
+                    score_minimising_final -= scores[value] # subtract the score of the element to the final score
 
-                return score_1_final # return the score for player 1
+                if self.maximizing_player: # if the player is the maximizing player
+                    return score_maximising_final # return the score for player 0
+                else: # if the player is the minimizing player
+                    return score_minimising_final # return the score for player 1
                 
 
         elif self.eval_function == 3: 
             # very similar to the previous one, but it gives a higher score to faster wins
 
-            scores = [0, 0, 0, 196, 2356, 28276]
+            scores = [0, 0, 0, 157, 1885, 22621]
             # scores calculated as:
             # scores[0] = 0
             # scores[1] = 1 but set to 0 because it is not useful in the score calculation
             # scores[i] = scores[i - 1] * 12 + 1 + 3 for i > 1 where 12 is the size of score_n_concatenated and 3 is the depth I usually use (4 is too computational expensive)
             # I chose this to be sure that, even in an impossible worse case, the importance of having a single line of length x is always greater than having all lines of length x - 1
 
-            board = game._board # get the board
-
-            if self.player_index == 0:
-                score_0_row = [0, 0, 0, 0, 0] # for player 0, the number of elements on each row
-                score_0_col = [0, 0, 0, 0, 0] # for player 0, the number of elements on each column
-                score_0_diag = [0, 0] # for player 0, the number of elements on each diagonal
-
-                for i in range(5): # for each row
-                    for j in range(5): # for each column
-                        if board[i][j] == 0: # if the element is 0
-                            score_0_row[i] += 1 # increase the number of elements on the i-th row
-                            score_0_col[j] += 1 # increase the number of elements on the j-th column
-
-                            if i == j: # on the first diagonal
-                                score_0_diag[0] += 1
-
-                            if i + j == 4: # on the second diagonal
-                                score_0_diag[1] += 1
-
-                score_0_concatenated = score_0_row + score_0_col + score_0_diag # concatenate the lists of rows, columns and diagonals for player 0
-                score_0_final = 0 # initialize the score for player 0
-
-                for value in score_0_concatenated: # for each element in the list of rows, columns and diagonals for player 0
-                    score_0_final += scores[value] # add the score of the element to the final score
-
-                return score_0_final - depth # return the score for player 0
-            
+            if winner == 0:
+                return scores[5] + depth
+            elif winner == 1:
+                return -scores[5] - depth
             else:
-                score_1_row = [0, 0, 0, 0, 0] # for player 1, the number of elements on each row
-                score_1_col = [0, 0, 0, 0, 0] # for player 1, the number of elements on each column 
-                score_1_diag = [0, 0] # for player 1, the number of elements on each diagonal
+                board = game._board
 
-                for i in range(5): # for each row
-                    for j in range(5): # for each column
-                        if board[i][j] == 1: # if the element is 1
-                            score_1_row[i] += 1 # increase the number of elements on the i-th row
-                            score_1_col[j] += 1 # increase the number of elements on the j-th column
+                score_0_row = [0, 0, 0, 0, 0]
+                score_1_row = [0, 0, 0, 0, 0]
+                score_0_col = [0, 0, 0, 0, 0]
+                score_1_col = [0, 0, 0, 0, 0]
+                score_0_diag = [0, 0]
+                score_1_diag = [0, 0]
 
-                            if i == j: # on the first diagonal
+                for i in range(5):
+                    for j in range(5):
+                        if board[i][j] == 0:
+                            score_0_row[i] += 1
+                            score_0_col[j] += 1
+                        elif board[i][j] == 1:
+                            score_1_row[i] += 1
+                            score_1_col[j] += 1
+
+                        if i == j: # on the first diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[0] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[0] += 1
 
-                            if i + j == 4: # on the second diagonal
+                        if i + j == 4: # on the second diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[1] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[1] += 1
 
-                score_1_concatenated = score_1_row + score_1_col + score_1_diag # concatenate the lists of rows, columns and diagonals for player 1
-                score_1_final = 0 # initialize the score for player 1
+                score_0_concatenated = score_0_row + score_0_col + score_0_diag
+                score_1_concatenated = score_1_row + score_1_col + score_1_diag
 
-                for value in score_1_concatenated: # for each element in the list of rows, columns and diagonals for player 1
-                    score_1_final += scores[value] # subtract the score of the element to the final score
+                score_maximising_final = 0
+                score_minimising_final = 0
 
-                return score_1_final - depth # return the score for player 1
+                for value in score_0_concatenated:
+                    score_maximising_final += scores[value]
+                for value in score_1_concatenated:
+                    score_minimising_final -= scores[value]
+
+                if self.maximizing_player:
+                    return score_maximising_final + depth # the same as before but take into account the depth (it favors faster wins)
+                else:
+                    return score_minimising_final - depth
                 
         elif self.eval_function == 4: 
             # very similar to the previous one, but it gives a higher score to faster wins and it takes into account the number of pieces owned by each player
@@ -468,63 +432,60 @@ class MinimaxPlayer(Player):
             # scores[i] = scores[i - 1] * 12 + 1 + 3 + 25 for i > 1 where 12 is the size of score_n_concatenated where 12, 3 is the depth I usually use (4 is too computational expensive), 25 is the number of pieces of the board
             # I chose this to be sure that, even in an impossible worse case, the importance of having a single line of length x is always greater than having all lines of length x - 1
 
-            board = game._board # get the board
-
-            if self.player_index == 0:
-                score_0_row = [0, 0, 0, 0, 0] # for player 0, the number of elements on each row
-                score_0_col = [0, 0, 0, 0, 0] # for player 0, the number of elements on each column
-                score_0_diag = [0, 0] # for player 0, the number of elements on each diagonal
-                pieces_0 = 0 # number of pieces owned by player 0
-
-                for i in range(5): # for each row
-                    for j in range(5): # for each column
-                        if board[i][j] == 0: # if the element is 0
-                            pieces_0 += 1 # increase the number of pieces owned by player 0
-
-                            score_0_row[i] += 1 # increase the number of elements on the i-th row
-                            score_0_col[j] += 1 # increase the number of elements on the j-th column
-
-                            if i == j: # on the first diagonal
-                                score_0_diag[0] += 1
-
-                            if i + j == 4: # on the second diagonal
-                                score_0_diag[1] += 1
-
-                score_0_concatenated = score_0_row + score_0_col + score_0_diag # concatenate the lists of rows, columns and diagonals for player 0
-                score_0_final = 0 # initialize the score for player 0
-
-                for value in score_0_concatenated: # for each element in the list of rows, columns and diagonals for player 0
-                    score_0_final += scores[value] # add the score of the element to the final score
-
-                return score_0_final - depth + pieces_0 # return the score for player 0
-            
+            if winner == 0:
+                return scores[5] + depth
+            elif winner == 1:
+                return -scores[5] - depth
             else:
-                score_1_row = [0, 0, 0, 0, 0] # for player 1, the number of elements on each row
-                score_1_col = [0, 0, 0, 0, 0] # for player 1, the number of elements on each column 
-                score_1_diag = [0, 0] # for player 1, the number of elements on each diagonal
-                pieces_1 = 0 # number of pieces owned by player 1
+                board = game._board
 
-                for i in range(5): # for each row
-                    for j in range(5): # for each column
-                        if board[i][j] == 1: # if the element is 1
-                            pieces_1 += 1 # increase the number of pieces owned by player 1
+                score_0_row = [0, 0, 0, 0, 0]
+                score_1_row = [0, 0, 0, 0, 0]
+                score_0_col = [0, 0, 0, 0, 0]
+                score_1_col = [0, 0, 0, 0, 0]
+                score_0_diag = [0, 0]
+                score_1_diag = [0, 0]
+                pieces_0 = 0
+                pieces_1 = 0
 
-                            score_1_row[i] += 1 # increase the number of elements on the i-th row
-                            score_1_col[j] += 1 # increase the number of elements on the j-th column
+                for i in range(5):
+                    for j in range(5):
+                        if board[i][j] == 0:
+                            pieces_0 += 1
+                            score_0_row[i] += 1
+                            score_0_col[j] += 1
+                        elif board[i][j] == 1:
+                            pieces_1 += 1
+                            score_1_row[i] += 1
+                            score_1_col[j] += 1
 
-                            if i == j: # on the first diagonal
+                        if i == j: # on the first diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[0] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[0] += 1
 
-                            if i + j == 4: # on the second diagonal
+                        if i + j == 4: # on the second diagonal
+                            if board[i][j] == 0:
+                                score_0_diag[1] += 1
+                            elif board[i][j] == 1:
                                 score_1_diag[1] += 1
 
-                score_1_concatenated = score_1_row + score_1_col + score_1_diag # concatenate the lists of rows, columns and diagonals for player 1
-                score_1_final = 0 # initialize the score for player 1
+                score_0_concatenated = score_0_row + score_0_col + score_0_diag
+                score_1_concatenated = score_1_row + score_1_col + score_1_diag
 
-                for value in score_1_concatenated: # for each element in the list of rows, columns and diagonals for player 1
-                    score_1_final += scores[value] # subtract the score of the element to the final score
+                score_maximising_final = 0
+                score_minimising_final = 0
 
-                return score_1_final - depth + pieces_1 # return the score for player 1
+                for value in score_0_concatenated:
+                    score_maximising_final += scores[value]
+                for value in score_1_concatenated:
+                    score_minimising_final -= scores[value]
+
+                if self.maximizing_player:
+                    return score_maximising_final + depth + pieces_0 # the same as before but take into account the depth (it favors faster wins) and the number of pieces owned by the player
+                else:
+                    return score_minimising_final - depth - pieces_1
         
     # def minimax(self, state : Game, depth : int, alpha : float, beta : float, maximizing_player : bool):
     #     winner = state.check_winner()
@@ -658,125 +619,3 @@ class MinimaxPlayer(Player):
     #         return min_eval, best_move
 
     
-
-    # def myminimax(self, state, alpha, beta, depth, maximizing_player):
-        
-    #     winner = state.check_winner()
-
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-
-    #     if maximizing_player:
-    #         max_eval = float('-inf')
-    #         best_move = None
-
-    #         available_moves = self.compute_available_moves(state)
-
-    #         for move in available_moves:
-
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.myminimax(child_state, depth - 1, alpha, beta, False)
-
-    #             max_eval = max(max_eval, eval)
-
-    #             alpha = max(alpha, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if max_eval == eval:
-    #                 best_move = move
-    #         return max_eval, best_move
-        
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         available_moves = self.compute_available_moves(state)
-
-    #         for move in available_moves:
-
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.myminimax(child_state, depth - 1, alpha, beta, True)
-
-    #             min_eval = min(min_eval, eval)
-
-    #             beta = min(beta, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if min_eval == eval:
-    #                 best_move = move
-    #         return min_eval, best_move
-                
-                # def minimax(self, state: Game, depth: int, alpha : float, beta : float, maximizing_player: bool):
-    #     winner = state.check_winner()
-    #     if depth == 0 or winner != -1:
-    #         return self.evaluate(state, winner, depth), None
-
-    #     available_moves = self.compute_available_moves(state)
-
-    #     if maximizing_player:
-
-    #         max_eval = float('-inf')
-    #         best_move = None
-
-    #         for move in available_moves:
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, False)
-
-    #             max_eval = max(max_eval, eval)
-
-    #             alpha = max(alpha, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if max_eval == eval:
-    #                 best_move = move
-    #         return max_eval, best_move
-
-    #     else:
-    #         min_eval = float('inf')
-    #         best_move = None
-
-    #         for move in available_moves:
-    #             child_state = MyGame(state)
-    #             from_pos, slide = move
-    #             _ = child_state._Game__move(from_pos, slide, child_state.current_player_idx)
-    #             child_state.current_player_idx += 1
-    #             child_state.current_player_idx %= 2
-
-    #             eval, _ = self.minimax(child_state, depth - 1, alpha, beta, True)
-
-    #             min_eval = min(min_eval, eval)
-
-    #             beta = min(beta, eval)
-
-    #             if beta <= alpha:
-    #                 break
-
-    #             # check if the current move is the best move
-    #             if min_eval == eval:
-    #                 best_move = move
-    #         return min_eval, best_move
-                    
