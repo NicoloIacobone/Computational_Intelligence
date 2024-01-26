@@ -106,9 +106,9 @@ class Game(object):
         players = [player1, player2]
         winner = -1
         game_print = []
-        players_moving = []
-        moves = []
-        moves_done = 0
+        # players_moving = []
+        # moves = []
+        # moves_done = 0
         while winner < 0:
             self.current_player_idx += 1
             self.current_player_idx %= len(players)
@@ -121,17 +121,18 @@ class Game(object):
                 # print(f"Player {self.current_player_idx} moved")
                 # print(f"Move: {from_pos} {slide}")
                 game_print.append(self.nice_print())
-                moves.append((from_pos, slide))
-                players_moving.append(self.current_player_idx)
+                # moves.append((from_pos, slide))
+                # players_moving.append(self.current_player_idx)
                 # print(self.nice_print())
-            moves_done += 1
+            # moves_done += 1
             winner = self.check_winner()
         if winner == 1:
             for i in range(len(game_print)):
                 print(game_print[i])
-                print(players_moving[i])
-                print(moves[i])
-        return winner, moves_done
+                # print(players_moving[i])
+                # print(moves[i])
+        # return winner, moves_done
+        return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
         '''Perform a move'''
