@@ -259,6 +259,13 @@ Average game length: 13.36
 ------------------------------------------------------------------------
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-In the meantime I continue training the reinforcement player
+In the meantime I continue training the reinforcement player:
+results after 4kk more training episodes:
+Win rate player 1: 92.10000000000001%
+Lose rate player 1: 7.9%
+Draw rate: 0.0%
+Average trajectory size: 32.0
+Entries: 94777382
+Policy size: 5.88 GB
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
