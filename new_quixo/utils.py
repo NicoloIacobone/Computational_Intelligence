@@ -16,7 +16,7 @@ class Utils:
               games: int = 1_000, # number of training games
               win_reward: int = 10, # reward for winning
               lose_reward: int = -10, # reward for losing
-              policy_name = "policy", # name of the policy
+              policy_name = "policies/policy", # name of the policy
               plot: bool = False, # if we want to plot the win rate
               decreasing_exp_rate: bool = False) -> None: # if we want to decrease the random move value during training
         
@@ -35,7 +35,7 @@ class Utils:
             plot_variables = []
 
         for round in tqdm(range(games)):
-            if plot and (round + 1) % (games // 20) == 0: # every 20% of the games
+            if (round + 1) % (games // 20) == 0: # every 20% of the games
                 if decreasing_exp_rate: # if the random move should decrease
                     if player1_reinforcement:
                         player1.set_random_move(player1.random_move * 0.5) # decrease the random move by 50%
@@ -43,8 +43,10 @@ class Utils:
                     if player2_reinforcement:
                         player2.set_random_move(player2.random_move * 0.5) # decrease the random move by 50%
                         player2.set_learning_rate(player2.learning_rate * 0.5) # decrease the learning rate by 50%
-                win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
-                plot_variables.append(win_rate) # append the win rate to the list to plot it later
+                # win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
+                if plot:
+                    win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
+                    plot_variables.append(win_rate) # append the win rate to the list to plot it later
                     
             game = Game() # create a new game
             win = game.play(player1, player2) # play the game
@@ -128,7 +130,7 @@ class Utils:
              player1: Player, 
              player2: Player, 
              games: int = 1_000, 
-             policy_name = "policy", 
+             policy_name = "policies/policy", 
              plot: bool = False) -> None:
         
         win_rate_player_1 = 0 # count of won games for player 1
@@ -165,8 +167,10 @@ class Utils:
             win = game.play(player1, player2)
             if win == 0:
                 win_rate_player_1 += 1
+                lose_rate_player_2 += 1
             elif win == 1:
                 lose_rate_player_1 += 1
+                win_rate_player_2 += 1
             else:
                 draw_rate += 1
             if player1_reinforcement:

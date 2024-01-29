@@ -30,4 +30,4 @@ if __name__ == '__main__':
     random_player = RandomPlayer()
     minimax_player = MinimaxPlayer()
 
-    game.play(human_player, minimax_player, True)  
+    game.play(human_player, random_player)  

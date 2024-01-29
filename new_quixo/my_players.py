@@ -146,7 +146,7 @@ class ReinforcementPlayer(Player):
         if self.player_index is None: # if this is the first move of the player
             self.player_index = game.current_player_idx # set the index of the player
             if not self.training: # if we are not training the model
-                self.load_policy("policy_" + str(self.player_index)) # load the policy file
+                self.load_policy("policies/policy_" + str(self.player_index)) # load the policy file
 
         best_move_score = None # the best move score is initialized with a very low value
         best_move = None # the best move is initialized with None
