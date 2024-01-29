@@ -1,6 +1,6 @@
 import random
 from game import Game, Move, Player
-from my_players import ReinforcementPlayer, HumanPlayer
+from my_players import ReinforcementPlayer, HumanPlayer, MinimaxPlayer
 from utils import Utils
 
 
@@ -28,5 +28,6 @@ if __name__ == '__main__':
     game = Game()
     human_player = HumanPlayer()
     random_player = RandomPlayer()
+    minimax_player = MinimaxPlayer()
 
-    game.play(human_player, random_player, True)  
+    game.play(human_player, minimax_player, True)  

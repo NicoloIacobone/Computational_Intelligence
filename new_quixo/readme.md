@@ -274,3 +274,14 @@ I'm cleaning a bit the code.
 I'm implementing an easier way a human player can play.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Finished to implement the graphical interface for the human player.
+Starting implementing the reinforcement player playing second.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Finished to implement the reinforcement player playing second.
+Restored main.py and game.py to the original version.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+

@@ -97,15 +97,11 @@ class Game(object):
             board_str += '\n'
 
         return board_str
-
-    def play(self, player1: Player, player2: Player, human_player : bool = False) -> int:
+    
+    def play(self, player1: Player, player2: Player) -> int:
         '''Play the game. Returns the winning player'''
         players = [player1, player2]
         winner = -1
-        game_print = []
-        # players_moving = []
-        # moves = []
-        # moves_done = 0
         while winner < 0:
             self.current_player_idx += 1
             self.current_player_idx %= len(players)
@@ -114,23 +110,42 @@ class Game(object):
                 from_pos, slide = players[self.current_player_idx].make_move(
                     self)
                 ok = self.__move(from_pos, slide, self.current_player_idx)
-            if human_player:
-                # print(f"Player {self.current_player_idx} moved")
-                # print(f"Move: {from_pos} {slide}")
-                game_print.append(self.nice_print())
-                # moves.append((from_pos, slide))
-                # players_moving.append(self.current_player_idx)
-                print(self.nice_print())
-            # moves_done += 1
             winner = self.check_winner()
-            print("Move: ", from_pos, slide)
-        if winner == 1:
-            for i in range(len(game_print)):
-                print(game_print[i])
-                # print(players_moving[i])
-                # print(moves[i])
-        # return winner, moves_done
         return winner
+
+    # def play(self, player1: Player, player2: Player, human_player : bool = False) -> int:
+    #     '''Play the game. Returns the winning player'''
+    #     players = [player1, player2]
+    #     winner = -1
+    #     game_print = []
+    #     # players_moving = []
+    #     # moves = []
+    #     # moves_done = 0
+    #     while winner < 0:
+    #         self.current_player_idx += 1
+    #         self.current_player_idx %= len(players)
+    #         ok = False
+    #         while not ok:
+    #             from_pos, slide = players[self.current_player_idx].make_move(
+    #                 self)
+    #             ok = self.__move(from_pos, slide, self.current_player_idx)
+    #         if human_player:
+    #             # print(f"Player {self.current_player_idx} moved")
+    #             # print(f"Move: {from_pos} {slide}")
+    #             game_print.append(self.nice_print())
+    #             # moves.append((from_pos, slide))
+    #             # players_moving.append(self.current_player_idx)
+    #             print(self.nice_print())
+    #         # moves_done += 1
+    #         winner = self.check_winner()
+    #         # print("Move: ", from_pos, slide)
+    #     if winner == 1:
+    #         for i in range(len(game_print)):
+    #             print(game_print[i])
+    #             # print(players_moving[i])
+    #             # print(moves[i])
+    #     # return winner, moves_done
+    #     return winner
 
     def __move(self, from_pos: tuple[int, int], slide: Move, player_id: int) -> bool:
         '''Perform a move'''
