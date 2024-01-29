@@ -3,9 +3,6 @@ from copy import deepcopy
 from enum import Enum
 import numpy as np
 
-# Rules on PDF
-
-
 class Move(Enum):
     '''
     Selects where you want to place the taken piece. The rest of the pieces are shifted
@@ -50,9 +47,9 @@ class Game(object):
         '''
         return deepcopy(self.current_player_idx)
 
-    # def print(self):
-    #     '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
-    #     print(self._board)
+    def print(self):
+        '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
+        print(self._board)
 
     def check_winner(self) -> int:
         '''Check the winner. Returns the player ID of the winner if any, otherwise returns -1'''
@@ -123,9 +120,10 @@ class Game(object):
                 game_print.append(self.nice_print())
                 # moves.append((from_pos, slide))
                 # players_moving.append(self.current_player_idx)
-                # print(self.nice_print())
+                print(self.nice_print())
             # moves_done += 1
             winner = self.check_winner()
+            print("Move: ", from_pos, slide)
         if winner == 1:
             for i in range(len(game_print)):
                 print(game_print[i])

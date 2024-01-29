@@ -6,24 +6,133 @@ import random
 import pickle
 import os
 import numpy as np
-from concurrent.futures import ProcessPoolExecutor
+import tkinter as tk
 
 class HumanPlayer(Player):
     def __init__(self) -> None:
         super().__init__()
+        self.chosen_row = None
+        self.chosen_col = None
+        self.chosen_move = None
+        self.available_moves = None
 
     def make_move(self, game: 'Game') -> tuple[tuple[int, int], Move]:
-        x = int(input("Move: "))
-        print("x: ", x)
 
-        y = int(input("Move: "))
-        print("y: ", y)
+        self.create_first_grid(game) # create the grid
 
-        move = Move(int(input("Move: ")))
-        print("move: ", move)
+        from_pos = (self.chosen_row, self.chosen_col)
+        return from_pos, self.chosen_move
+    
+    def create_first_grid(self, game : Game):
 
-        from_pos = (x, y)
-        return from_pos, move
+        row_col_dict = set() # create a set to store the coordinates of the available moves, we use the set to avoid duplicates
+        self.compute_available_moves(game) # compute all possible moves in the current state
+        game_board = game._board # get the board
+
+        for move in self.available_moves: # for each possible move
+            row, col = move[0]
+            row_col_dict.add((row, col)) # add the coordinates of the move to the set
+
+        for element in row_col_dict:
+            print(element)
+
+        root = tk.Tk() # create the window
+        root.title("Quixo") # set the title
+        root.geometry("325x325") # set the size
+
+        i = 0
+        j = 0
+        buttons = []  # Lista per memorizzare i riferimenti ai pulsanti
+        for row in game_board: # for each row
+            button_row = []  # Lista per memorizzare i pulsanti di questa riga
+            for cell in row:
+                if cell == -1:
+                    button = tk.Button(root, height=3, width=3, text="⬜️")
+                    button.grid(row=i, column=j)
+                elif cell == 0:
+                    button = tk.Button(root, height=3, width=3, text="❌")
+                    button.grid(row=i, column=j)
+                else:
+                    button = tk.Button(root, height=3, width=3, text="⭕️")
+                    button.grid(row=i, column=j)
+                button_row.append(button)
+                j += 1
+            buttons.append(button_row)
+            i += 1
+            j = 0
+
+        # Assegna la funzione on-click ai pulsanti
+        for i, button_row in enumerate(buttons):
+            for j, button in enumerate(button_row):
+                if (i, j) in row_col_dict:
+                    button.config(command=lambda row=i, col=j: self.on_button_click(row=row, col=col, valid=True, root=root))
+                else:
+                    button.config(command=lambda row=i, col=j: self.on_button_click(row=row, col=col, valid=False))
+        
+
+        # for i in range(5): # for each row
+        #     for j in range(5): # for each column
+        #         if (i, j) in row_col_dict:
+        #             button = tk.Button(root, height=3, width=3, text=(i, j), fg='black', command=lambda row=j, col=i: self.on_button_click(row=col, col=row, valid=True, root=root))
+        #             button.grid(row=j, column=i)
+        #         else:
+        #             button = tk.Button(root, height=3, width=3, text="🚫", command=lambda row=i, col=j: self.on_button_click(row, col, False))
+        #             button.grid(row=i, column=j)
+
+        root.mainloop() # start the window
+
+    def create_second_grid(self):
+        ordered_moves = [Move.TOP, Move.BOTTOM, Move.LEFT, Move.RIGHT]
+        slide_text = ["⬆️", "⬇️", "⬅️", "➡️"]
+        available_slides = []
+
+        root = tk.Tk() # create the window
+        root.title("Quixo") # set the title
+        root.geometry("325x325") # set the size
+
+        for move in self.available_moves: # for each possible move
+            if (self.chosen_row, self.chosen_col) == move[0]:
+                available_slides.append(move[1])
+
+        for i in range(4):
+            if ordered_moves[i] in available_slides:
+                button = tk.Button(root, height=3, width=3, text=slide_text[i], fg='black', command=lambda slide=ordered_moves[i]: self.on_button_click(slide=slide, valid=True, root=root))
+                button.grid(row=0, column=i)
+            else:
+                button = tk.Button(root, height=3, width=3, text="🚫", command=lambda slide=ordered_moves[i]: self.on_button_click(slide, False))
+                button.grid(row=0, column=i)
+
+        root.mainloop() # start the window
+
+    def on_button_click(self, row = None, col = None, slide = None, valid : bool = None, root : tk.Tk = None):
+        if valid:
+            if row is not None and col is not None:
+                print("Row: ", row)
+                self.chosen_row = row
+                print("Col: ", col)
+                self.chosen_col = col
+                root.destroy() # destroy the window
+                self.create_second_grid()
+            elif slide is not None:
+                print("Slide: ", slide)
+                self.chosen_move = slide
+                root.destroy() # destroy the window
+        else:
+            if row is not None and col is not None:
+                print("Invalid move")
+            elif slide is not None:
+                print("Invalid slide")
+
+    def compute_available_moves(self, game: Game):
+        ''' Compute all possible moves in this state '''
+        # reset the old list of available moves
+        self.neutral_moves = []
+
+        # create a new board to test the moves
+        test_board = MyGame(game)
+
+        # call the function that computes all possible moves
+        self.available_moves = test_board.compute_available_moves()
     
 class ReinforcementPlayer(Player):
     def __init__(self, random_move = 0.3, learning_rate = 0.1, training = False):
