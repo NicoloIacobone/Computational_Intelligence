@@ -296,3 +296,10 @@ In the meanwhile, I discovered I could save half of the space saving the hashed 
 Before, each element of the board was saved using 2 bytes, now it is saved using 1 byte.
 
 To save some resources I can store the not-hashed version of the boards in the trajectory.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Finished implementing the symmetry. Now I need to implement the mirroring.
+- [ ] To save some resources I can store the not-hashed version of the boards in the trajectory.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -158,6 +158,7 @@ class ReinforcementPlayer(Player):
         else: # otherwise do exploitation
             test_board = MyGame(game) # create a new board to test the moves
             old_board = test_board._board.copy() # save the old board to restore it after testing a move
+            actual_move_score = None # the actual move score is initialized with None
             for move in self.available_moves: # for each possible move
                 from_pos, slide = move # get the move
                 _ = test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
@@ -168,31 +169,46 @@ class ReinforcementPlayer(Player):
                 # I need a total of 4 hashed states, one for each rotation
                 # I need to rotate the board 3 times to get the other 3 hashed states
                 # hashable_state = test_board._board.flatten().tobytes() # get the hashable state
-
                 for i in range (4):
-                    board_to_hash = np.rot90(test_board._board, k=i) # rotate the board
-                    hashable_state = board_to_hash.astype(np.int8).flatten().tobytes() # get the hashable state
-                    actual_move_score = self.value_dictionary[hashable_state]
-                    if actual_move_score == 0: # if the state was never visited
-                        del self.value_dictionary[hashable_state] # remove the state from the dictionary because it was created from the access to read the value
+                    board_to_hash_rotated = np.rot90(test_board._board, k=i) # rotate the board
+                    board_to_hash_flipped = np.flip(board_to_hash_rotated)
+
+                    hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
+                    hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes()
+
+                    if hashable_state_rotated == hashable_state_flipped:
+                        actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
+
+                        if actual_move_score_rotated == 0:
+                            del self.value_dictionary[hashable_state_rotated]
+                        else:
+                            never_visited = False
+                            actual_move_score = actual_move_score_rotated
+                            break
                     else:
-                        never_visited = False
-                        break # if the state was visited, break the for loop
 
-                ##################################
+                        actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
+                        actual_move_score_flipped = self.value_dictionary[hashable_state_flipped]
 
-                # hashable_state = test_board._board.flatten().tobytes()
-                # actual_move_score = self.value_dictionary[hashable_state] # get the value of the state
+                        if actual_move_score_rotated != 0 or actual_move_score_flipped != 0:
+                            never_visited = False
+                            if actual_move_score_rotated != 0:
+                                actual_move_score = actual_move_score_rotated
+                                del self.value_dictionary[hashable_state_flipped]
+                                break
+                            else:
+                                actual_move_score = actual_move_score_flipped
+                                del self.value_dictionary[hashable_state_rotated]
+                                break
+                        else:
+                            del self.value_dictionary[hashable_state_rotated]
+                            del self.value_dictionary[hashable_state_flipped]
+                        
                 
                 test_board._board = old_board.copy() # restore the old board after testing a move
 
-                # to solve the problem of unseen states that are added to the dictionary with a value of 0 while
-                # looking for the best move, if actual_move_score is 0 it means that the state was never visited, in this case
-                # we remove the state from the dictionary
-                # if actual_move_score == 0: # if the state was never visited
-                #     del self.value_dictionary[hashable_state] # remove the state from the dictionary because it was created from the access to read the value
-                # else:
-                #     never_visited = False
+                if actual_move_score == None: # if the state was never visited
+                    actual_move_score = 0 # set the score to 0
 
                 if best_move is None or actual_move_score > best_move_score: # if the actual move score is better than the best move score
                     best_move_score = actual_move_score # update the best move score
@@ -229,83 +245,110 @@ class ReinforcementPlayer(Player):
             ######### TESTS ROTATION #########
             if reward > 0 or suicide:
                 state_to_check = self.trajectory[-1]
-                print("state_to_check:\t", state_to_check)
+                # print("state_to_check:\t", state_to_check)
                 for i in range(4):
                     original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5)
+
                     state_rotated = np.rot90(original_state, k = i) # rotate the board
+                    state_flipped = np.flip(state_rotated)
+
                     hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
-                    print("state_rotated_" + str(i) + (":\t") + str(state_rotated))
-                    state_score_to_check = self.value_dictionary[hashed_state_rotated]
-                    # state_score_to_check = self.value_dictionary[state_rotated]
-                    if state_score_to_check == 0: # if the state does not exists
-                        del self.value_dictionary[hashed_state_rotated]
-                        # del self.value_dictionary[state_rotated]
-                    elif state_score_to_check != 0 or i == 3:
-                        self.value_dictionary[hashed_state_rotated] += 100_000_000
-                        # self.value_dictionary[state_rotated] += 100_000_000
-                        break
-            
+                    hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+
+                    if hashed_state_rotated == hashed_state_flipped:
+                        state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                        if state_score_to_check_rotated == 0 and i != 3:
+                            del self.value_dictionary[hashed_state_rotated]
+                        else:
+                            self.value_dictionary[hashed_state_rotated] += 100_000_000
+                            break
+
+                    else:
+                        state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                        state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+
+                        if i != 3:
+                            if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
+                                del self.value_dictionary[hashed_state_rotated]
+                                del self.value_dictionary[hashed_state_flipped]
+                            elif state_score_to_check_rotated != 0:
+                                del self.value_dictionary[hashed_state_flipped]
+                                self.value_dictionary[hashed_state_rotated] += 100_000_000
+                                break
+                            else:
+                                del self.value_dictionary[hashed_state_rotated]
+                                self.value_dictionary[hashed_state_flipped] += 100_000_000
+                                break
+                        else:
+                            if state_score_to_check_flipped != 0:
+                                del self.value_dictionary[hashed_state_rotated]
+                                self.value_dictionary[hashed_state_flipped] += 100_000_000
+                                break
+                            else:
+                                del self.value_dictionary[hashed_state_flipped]
+                                self.value_dictionary[hashed_state_rotated] += 100_000_000
+                                break
             if not suicide:
                 for state in reversed(self.trajectory):
-                    print("state_to_check:\n", state)
                     for i in range(4):
                         original_state = np.frombuffer(state, dtype=np.int8).reshape(5, 5) # obtain the original array
+
                         state_rotated = np.rot90(original_state, k = i) # rotate it
-                        print("state_rotated_" + str(i) + (":\n") + str(state_rotated))
+                        state_flipped = np.flip(state_rotated)
+
                         hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
-                        state_score_to_check = self.value_dictionary[hashed_state_rotated]
-                        # state_score_to_check = self.value_dictionary[state_rotated]
-                        if state_score_to_check == 0 and i != 3:
-                            del self.value_dictionary[hashed_state_rotated]
-                            # del self.value_dictionary[state_rotated]
-                        elif state_score_to_check != 0 or i == 3:
-                            # print("hashed_state_rotated:\t", hashed_state_rotated)
-                            # print("reward:\t", reward)
-                            self.value_dictionary[hashed_state_rotated] += reward
-                            if self.value_dictionary[hashed_state_rotated] == 0: # if the value has for some reason value 0 after adding/subtracting rewards
-                                self.value_dictionary[hashed_state_rotated] += 1e-50 # set a very small value that does not influence make_move and does not get confused as a never visited state
-                            break
-                            # self.value_dictionary[state_rotated] += reward 
+                        hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+
+                        if hashed_state_rotated == hashed_state_flipped:
+                            state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                            if state_score_to_check_rotated == 0 and i != 3:
+                                del self.value_dictionary[hashed_state_rotated]
+                            else:
+                                self.value_dictionary[hashed_state_rotated] += reward
+                                if self.value_dictionary[hashed_state_rotated] == 0:
+                                    self.value_dictionary[hashed_state_rotated] += 1e-50
+                                break
+
+                        else:
+                            state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                            state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+
+                            if i != 3:
+                                if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
+                                    del self.value_dictionary[hashed_state_rotated]
+                                    del self.value_dictionary[hashed_state_flipped]
+                                elif state_score_to_check_rotated != 0:
+                                    del self.value_dictionary[hashed_state_flipped]
+                                    self.value_dictionary[hashed_state_rotated] += reward
+                                    if self.value_dictionary[hashed_state_rotated] == 0:
+                                        self.value_dictionary[hashed_state_rotated] += 1e-50
+                                    break
+                                else:
+                                    del self.value_dictionary[hashed_state_rotated]
+                                    self.value_dictionary[hashed_state_flipped] += reward
+                                    if self.value_dictionary[hashed_state_flipped] == 0:
+                                        self.value_dictionary[hashed_state_flipped] += 1e-50
+                                    break
+
+                            else:
+                                if state_score_to_check_flipped != 0:
+                                    del self.value_dictionary[hashed_state_rotated]
+                                    self.value_dictionary[hashed_state_flipped] += reward
+                                    if self.value_dictionary[hashed_state_flipped] == 0:
+                                        self.value_dictionary[hashed_state_flipped] += 1e-50
+                                    break
+                                else:
+                                    del self.value_dictionary[hashed_state_flipped]
+                                    self.value_dictionary[hashed_state_rotated] += reward
+                                    if self.value_dictionary[hashed_state_rotated] == 0:
+                                        self.value_dictionary[hashed_state_rotated] += 1e-50
+                                    break
                     
                     reward *= 0.95
-                    # if self.value_dictionary[state] == 0:
-                    #     self.value_dictionary[state] += 1e-50
 
                     count += 1
                     if count % decrease_point == 0:
                         reward *= 0.5
-            ##################################
-
-            # if reward > 0 or suicide: # if the player made the right move to win or the wrong move to let the opponent win
-            #     self.value_dictionary[self.trajectory[-1]] += reward * 100_000_000
-            #     # huge value assigned to the winning move or to the wrong move to not insert an if loop inside the for loop that is true only one time
-
-            # if not suicide:
-            #     for state in reversed(self.trajectory): # for each value in the trajectory in reversed order
-            #         self.value_dictionary[state] += reward # increase the value of the state by reward
-            #         reward *= 0.95 # reward decay of 5% for each step
-            #         if self.value_dictionary[state] == 0: # if the value has for some reason value 0 after adding/subtracting rewards
-            #             self.value_dictionary[state] += 1e-50 # set a very small value that does not influence make_move and does not get confused as a never visited state
-
-            #         count += 1
-            #         if count % decrease_point == 0:
-            #             reward *= 0.5
-
-            # step_penalty = -abs(reward / 100) # 1% of reward is subtracted from each step to favor faster wins
-            # first_move = True
-            # if not suicide: # if I haven't made the move that let me lose
-            #     for state in reversed(self.trajectory): # for each move I made, starting from the last one
-            #         if first_move and reward > 0: # if the reward is positive (i.e. the agent won), give a big reward to the last move 
-            #             self.value_dictionary[state] += reward * 1_000
-            #             first_move = False
-            #         else:
-            #             self.value_dictionary[state] += self.learning_rate * (0.9 * reward - self.value_dictionary[state]) + step_penalty # distribute the reward
-            #             reward = self.value_dictionary[state] # reduce the reward that will be used for the next step's reward
-            #             first_move = False
-            # else: # if I made the move that let me lose
-            #     self.value_dictionary[self.trajectory[-1]] += reward # apply the negative reward (it is huge) only on the last move
-            # if self.value_dictionary[state] == 0:
-            #         self.value_dictionary[state] += 1e-50 # a value can't be zero, otherwise it is confused with a never visited state
 
 
     def get_rewards(self):
