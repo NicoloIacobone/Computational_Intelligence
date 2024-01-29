@@ -35,18 +35,19 @@ class Utils:
             plot_variables = []
 
         for round in tqdm(range(games)):
-            if (round + 1) % (games // 20) == 0: # every 20% of the games
-                if decreasing_exp_rate: # if the random move should decrease
-                    if player1_reinforcement:
-                        player1.set_random_move(player1.random_move * 0.5) # decrease the random move by 50%
-                        player1.set_learning_rate(player1.learning_rate * 0.5) # decrease the learning rate by 50%
-                    if player2_reinforcement:
-                        player2.set_random_move(player2.random_move * 0.5) # decrease the random move by 50%
-                        player2.set_learning_rate(player2.learning_rate * 0.5) # decrease the learning rate by 50%
-                # win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
-                if plot:
-                    win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
-                    plot_variables.append(win_rate) # append the win rate to the list to plot it later
+            if decreasing_exp_rate or plot:
+                if (round + 1) % (games // 20) == 0: # every 20% of the games
+                    if decreasing_exp_rate: # if the random move should decrease
+                        if player1_reinforcement:
+                            player1.set_random_move(player1.random_move * 0.5) # decrease the random move by 50%
+                            player1.set_learning_rate(player1.learning_rate * 0.5) # decrease the learning rate by 50%
+                        if player2_reinforcement:
+                            player2.set_random_move(player2.random_move * 0.5) # decrease the random move by 50%
+                            player2.set_learning_rate(player2.learning_rate * 0.5) # decrease the learning rate by 50%
+                    # win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
+                    if plot:
+                        win_rate = self.test(player1, player2, 500, policy_name, True) # test the player against a random player
+                        plot_variables.append(win_rate) # append the win rate to the list to plot it later
                     
             game = Game() # create a new game
             win = game.play(player1, player2) # play the game

@@ -285,3 +285,14 @@ Restored main.py and game.py to the original version.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Starting implementing symmetric states.
+
+"Rotating or mirroring the board does not change the state value. There fore states can be grouped in equivalence classes. Said differently, states with symmetrical boards can be merged into a single node in the game graph. This optimization divides approximately by eight the number of states: four being due to rotations, and two to vertical mirroring. Note that the horizontal mirroring is the same as vertical mirroring and 180° rotation. Also, swapping the active player and ﬂipping all Xs and Os to Os and Xs respectively creates a new equivalent state. Figure 2 illustrates these notions. All four states are equivalent."
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Started testing the symmetry implementation.
+In the meanwhile, I discovered I could save half of the space saving the hashed state as board.astype(np.int8).flatten().tobytes().
+Before, each element of the board was saved using 2 bytes, now it is saved using 1 byte.
+
+To save some resources I can store the not-hashed version of the boards in the trajectory.
