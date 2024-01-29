@@ -169,46 +169,72 @@ class ReinforcementPlayer(Player):
                 # I need a total of 4 hashed states, one for each rotation
                 # I need to rotate the board 3 times to get the other 3 hashed states
                 # hashable_state = test_board._board.flatten().tobytes() # get the hashable state
-                for i in range (4):
-                    board_to_hash_rotated = np.rot90(test_board._board, k=i) # rotate the board
-                    board_to_hash_flipped = np.flip(board_to_hash_rotated)
+
+                symmetries_set = set() # set of symmetries
+
+                for i in range(4):
+                    board_to_hash_rotated = np.rot90(test_board._board, k=i)
+                    # board_to_hash_flipped = np.flip(board_to_hash_rotated)
+                    board_to_hash_flipped = np.flip(board_to_hash_rotated, axis=0)
 
                     hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
                     hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes()
 
-                    if hashable_state_rotated == hashable_state_flipped:
-                        actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
+                    symmetries_set.add(hashable_state_rotated)
+                    symmetries_set.add(hashable_state_flipped)
 
-                        if actual_move_score_rotated == 0:
-                            del self.value_dictionary[hashable_state_rotated]
-                        else:
-                            never_visited = False
-                            actual_move_score = actual_move_score_rotated
-                            break
+                counter = 1
+                for hashable_state in symmetries_set:
+                    actual_move_score = self.value_dictionary[hashable_state]
+                    if actual_move_score == 0:
+                        del self.value_dictionary[hashable_state]
                     else:
+                        never_visited = False
+                        break
+                    if counter == len(symmetries_set):
+                        never_visited = False
+                    counter += 1
 
-                        actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
-                        actual_move_score_flipped = self.value_dictionary[hashable_state_flipped]
+                # for i in range (4):
+                #     board_to_hash_rotated = np.rot90(test_board._board, k=i) # rotate the board
+                #     board_to_hash_flipped = np.flip(board_to_hash_rotated)
 
-                        if actual_move_score_rotated != 0 or actual_move_score_flipped != 0:
-                            never_visited = False
-                            if actual_move_score_rotated != 0:
-                                actual_move_score = actual_move_score_rotated
-                                del self.value_dictionary[hashable_state_flipped]
-                                break
-                            else:
-                                actual_move_score = actual_move_score_flipped
-                                del self.value_dictionary[hashable_state_rotated]
-                                break
-                        else:
-                            del self.value_dictionary[hashable_state_rotated]
-                            del self.value_dictionary[hashable_state_flipped]
+                #     hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
+                #     hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes()
+
+                #     if hashable_state_rotated == hashable_state_flipped:
+                #         actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
+
+                #         if actual_move_score_rotated == 0:
+                #             del self.value_dictionary[hashable_state_rotated]
+                #         else:
+                #             never_visited = False
+                #             actual_move_score = actual_move_score_rotated
+                #             break
+                #     else:
+
+                #         actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
+                #         actual_move_score_flipped = self.value_dictionary[hashable_state_flipped]
+
+                #         if actual_move_score_rotated != 0 or actual_move_score_flipped != 0:
+                #             never_visited = False
+                #             if actual_move_score_rotated != 0:
+                #                 actual_move_score = actual_move_score_rotated
+                #                 del self.value_dictionary[hashable_state_flipped]
+                #                 break
+                #             else:
+                #                 actual_move_score = actual_move_score_flipped
+                #                 del self.value_dictionary[hashable_state_rotated]
+                #                 break
+                #         else:
+                #             del self.value_dictionary[hashable_state_rotated]
+                #             del self.value_dictionary[hashable_state_flipped]
                         
                 
                 test_board._board = old_board.copy() # restore the old board after testing a move
 
-                if actual_move_score == None: # if the state was never visited
-                    actual_move_score = 0 # set the score to 0
+                # if actual_move_score == None: # if the state was never visited
+                #     actual_move_score = 0 # set the score to 0
 
                 if best_move is None or actual_move_score > best_move_score: # if the actual move score is better than the best move score
                     best_move_score = actual_move_score # update the best move score
@@ -244,105 +270,165 @@ class ReinforcementPlayer(Player):
 
             ######### TESTS ROTATION #########
             if reward > 0 or suicide:
-                state_to_check = self.trajectory[-1]
-                # print("state_to_check:\t", state_to_check)
+                state_to_check = self.trajectory[-1] # already hashed
+                original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5) # need to be restored to rotate and flip
+
+                symmetries_set_suicide = set()
+
                 for i in range(4):
-                    original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5)
-
                     state_rotated = np.rot90(original_state, k = i) # rotate the board
-                    state_flipped = np.flip(state_rotated)
+                    # state_flipped = np.flip(state_rotated)
+                    state_flipped = np.flip(state_rotated, axis = 0)
 
-                    hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
-                    hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+                    hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
+                    hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
 
-                    if hashed_state_rotated == hashed_state_flipped:
-                        state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
-                        if state_score_to_check_rotated == 0 and i != 3:
-                            del self.value_dictionary[hashed_state_rotated]
-                        else:
-                            self.value_dictionary[hashed_state_rotated] += 100_000_000
-                            break
+                    symmetries_set_suicide.add(hashed_state_rotated) # add the two states to the set
+                    symmetries_set_suicide.add(hashed_state_flipped)
 
+                counter = 1
+                for hashable_state in symmetries_set_suicide:
+                    actual_move_score = self.value_dictionary[hashable_state]
+                    if actual_move_score == 0:
+                        del self.value_dictionary[hashable_state]
                     else:
-                        state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
-                        state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+                        self.value_dictionary[hashable_state] += 100_000_000
+                        break
+                    if counter == len(symmetries_set_suicide):
+                        self.value_dictionary[hashable_state] += 100_000_000
+                        break           
+                    counter += 1
 
-                        if i != 3:
-                            if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
-                                del self.value_dictionary[hashed_state_rotated]
-                                del self.value_dictionary[hashed_state_flipped]
-                            elif state_score_to_check_rotated != 0:
-                                del self.value_dictionary[hashed_state_flipped]
-                                self.value_dictionary[hashed_state_rotated] += 100_000_000
-                                break
-                            else:
-                                del self.value_dictionary[hashed_state_rotated]
-                                self.value_dictionary[hashed_state_flipped] += 100_000_000
-                                break
-                        else:
-                            if state_score_to_check_flipped != 0:
-                                del self.value_dictionary[hashed_state_rotated]
-                                self.value_dictionary[hashed_state_flipped] += 100_000_000
-                                break
-                            else:
-                                del self.value_dictionary[hashed_state_flipped]
-                                self.value_dictionary[hashed_state_rotated] += 100_000_000
-                                break
+                # print("state_to_check:\t", state_to_check)
+                # for i in range(4):
+                #     original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5)
+
+                #     state_rotated = np.rot90(original_state, k = i) # rotate the board
+                #     state_flipped = np.flip(state_rotated)
+
+                #     hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
+                #     hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+
+                #     if hashed_state_rotated == hashed_state_flipped:
+                #         state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                #         if state_score_to_check_rotated == 0 and i != 3:
+                #             del self.value_dictionary[hashed_state_rotated]
+                #         else:
+                #             self.value_dictionary[hashed_state_rotated] += 100_000_000
+                #             break
+
+                #     else:
+                #         state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                #         state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+
+                #         if i != 3:
+                #             if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
+                #                 del self.value_dictionary[hashed_state_rotated]
+                #                 del self.value_dictionary[hashed_state_flipped]
+                #             elif state_score_to_check_rotated != 0:
+                #                 del self.value_dictionary[hashed_state_flipped]
+                #                 self.value_dictionary[hashed_state_rotated] += 100_000_000
+                #                 break
+                #             else:
+                #                 del self.value_dictionary[hashed_state_rotated]
+                #                 self.value_dictionary[hashed_state_flipped] += 100_000_000
+                #                 break
+                #         else:
+                #             if state_score_to_check_flipped != 0:
+                #                 del self.value_dictionary[hashed_state_rotated]
+                #                 self.value_dictionary[hashed_state_flipped] += 100_000_000
+                #                 break
+                #             else:
+                #                 del self.value_dictionary[hashed_state_flipped]
+                #                 self.value_dictionary[hashed_state_rotated] += 100_000_000
+                #                 break
             if not suicide:
                 for state in reversed(self.trajectory):
+                    symmetries_set_not_suicide = set()
                     for i in range(4):
                         original_state = np.frombuffer(state, dtype=np.int8).reshape(5, 5) # obtain the original array
 
                         state_rotated = np.rot90(original_state, k = i) # rotate it
-                        state_flipped = np.flip(state_rotated)
+                        # state_flipped = np.flip(state_rotated)
+                        state_flipped = np.flip(state_rotated, axis = 0)
 
                         hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
                         hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
 
-                        if hashed_state_rotated == hashed_state_flipped:
-                            state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
-                            if state_score_to_check_rotated == 0 and i != 3:
-                                del self.value_dictionary[hashed_state_rotated]
-                            else:
-                                self.value_dictionary[hashed_state_rotated] += reward
-                                if self.value_dictionary[hashed_state_rotated] == 0:
-                                    self.value_dictionary[hashed_state_rotated] += 1e-50
-                                break
+                        symmetries_set_not_suicide.add(hashed_state_rotated)
+                        symmetries_set_not_suicide.add(hashed_state_flipped)
 
+                    counter = 1
+                    for hashable_state in symmetries_set_not_suicide:
+                        actual_move_score = self.value_dictionary[hashable_state]
+                        if actual_move_score == 0:
+                            del self.value_dictionary[hashable_state]
                         else:
-                            state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
-                            state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+                            self.value_dictionary[hashable_state] += reward
+                            if self.value_dictionary[hashable_state] == 0:
+                                self.value_dictionary[hashable_state] += 1e-50
+                            break
 
-                            if i != 3:
-                                if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
-                                    del self.value_dictionary[hashed_state_rotated]
-                                    del self.value_dictionary[hashed_state_flipped]
-                                elif state_score_to_check_rotated != 0:
-                                    del self.value_dictionary[hashed_state_flipped]
-                                    self.value_dictionary[hashed_state_rotated] += reward
-                                    if self.value_dictionary[hashed_state_rotated] == 0:
-                                        self.value_dictionary[hashed_state_rotated] += 1e-50
-                                    break
-                                else:
-                                    del self.value_dictionary[hashed_state_rotated]
-                                    self.value_dictionary[hashed_state_flipped] += reward
-                                    if self.value_dictionary[hashed_state_flipped] == 0:
-                                        self.value_dictionary[hashed_state_flipped] += 1e-50
-                                    break
+                        if counter == len(symmetries_set_not_suicide):
+                            self.value_dictionary[hashable_state] += reward
+                            if self.value_dictionary[hashable_state] == 0:
+                                self.value_dictionary[hashable_state] += 1e-50
+                            break
+                        counter+=1
 
-                            else:
-                                if state_score_to_check_flipped != 0:
-                                    del self.value_dictionary[hashed_state_rotated]
-                                    self.value_dictionary[hashed_state_flipped] += reward
-                                    if self.value_dictionary[hashed_state_flipped] == 0:
-                                        self.value_dictionary[hashed_state_flipped] += 1e-50
-                                    break
-                                else:
-                                    del self.value_dictionary[hashed_state_flipped]
-                                    self.value_dictionary[hashed_state_rotated] += reward
-                                    if self.value_dictionary[hashed_state_rotated] == 0:
-                                        self.value_dictionary[hashed_state_rotated] += 1e-50
-                                    break
+                    # for i in range(4):
+                    #     original_state = np.frombuffer(state, dtype=np.int8).reshape(5, 5) # obtain the original array
+
+                    #     state_rotated = np.rot90(original_state, k = i) # rotate it
+                    #     state_flipped = np.flip(state_rotated)
+
+                    #     hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
+                    #     hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+
+                    #     if hashed_state_rotated == hashed_state_flipped:
+                    #         state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                    #         if state_score_to_check_rotated == 0 and i != 3:
+                    #             del self.value_dictionary[hashed_state_rotated]
+                    #         else:
+                    #             self.value_dictionary[hashed_state_rotated] += reward
+                    #             if self.value_dictionary[hashed_state_rotated] == 0:
+                    #                 self.value_dictionary[hashed_state_rotated] += 1e-50
+                    #             break
+
+                    #     else:
+                    #         state_score_to_check_rotated = self.value_dictionary[hashed_state_rotated]
+                    #         state_score_to_check_flipped = self.value_dictionary[hashed_state_flipped]
+
+                    #         if i != 3:
+                    #             if state_score_to_check_rotated == 0 and state_score_to_check_flipped == 0:
+                    #                 del self.value_dictionary[hashed_state_rotated]
+                    #                 del self.value_dictionary[hashed_state_flipped]
+                    #             elif state_score_to_check_rotated != 0:
+                    #                 del self.value_dictionary[hashed_state_flipped]
+                    #                 self.value_dictionary[hashed_state_rotated] += reward
+                    #                 if self.value_dictionary[hashed_state_rotated] == 0:
+                    #                     self.value_dictionary[hashed_state_rotated] += 1e-50
+                    #                 break
+                    #             else:
+                    #                 del self.value_dictionary[hashed_state_rotated]
+                    #                 self.value_dictionary[hashed_state_flipped] += reward
+                    #                 if self.value_dictionary[hashed_state_flipped] == 0:
+                    #                     self.value_dictionary[hashed_state_flipped] += 1e-50
+                    #                 break
+
+                    #         else:
+                    #             if state_score_to_check_flipped != 0:
+                    #                 del self.value_dictionary[hashed_state_rotated]
+                    #                 self.value_dictionary[hashed_state_flipped] += reward
+                    #                 if self.value_dictionary[hashed_state_flipped] == 0:
+                    #                     self.value_dictionary[hashed_state_flipped] += 1e-50
+                    #                 break
+                    #             else:
+                    #                 del self.value_dictionary[hashed_state_flipped]
+                    #                 self.value_dictionary[hashed_state_rotated] += reward
+                    #                 if self.value_dictionary[hashed_state_rotated] == 0:
+                    #                     self.value_dictionary[hashed_state_rotated] += 1e-50
+                    #                 break
                     
                     reward *= 0.95
 
