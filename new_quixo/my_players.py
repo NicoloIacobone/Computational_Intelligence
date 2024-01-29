@@ -31,7 +31,7 @@ class HumanPlayer(Player):
 
         for move in self.available_moves: # for each possible move
             row, col = move[0]
-            row_col_dict.add((row, col)) # add the coordinates of the move to the set
+            row_col_dict.add((col, row)) # add the coordinates of the move to the set
 
         for element in row_col_dict:
             print(element)
@@ -65,9 +65,9 @@ class HumanPlayer(Player):
         for i, button_row in enumerate(buttons):
             for j, button in enumerate(button_row):
                 if (i, j) in row_col_dict:
-                    button.config(command=lambda row=i, col=j: self.on_button_click(row=row, col=col, valid=True, root=root))
+                    button.config(command=lambda row=i, col=j: self.on_button_click(row=col, col=row, valid=True, root=root))
                 else:
-                    button.config(command=lambda row=i, col=j: self.on_button_click(row=row, col=col, valid=False))
+                    button.config(command=lambda row=i, col=j: self.on_button_click(row=col, col=row, valid=False))
         
 
         # for i in range(5): # for each row
