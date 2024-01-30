@@ -165,11 +165,6 @@ class ReinforcementPlayer(Player):
                 # hashable_state = np.array2string(game._board.flatten(), separator = '')
                 # hashable_state = tuple(game._board.flatten()) # get the hashable state (use the board as key)
 
-                ######### TESTS ROTATION #########
-                # I need a total of 4 hashed states, one for each rotation
-                # I need to rotate the board 3 times to get the other 3 hashed states
-                # hashable_state = test_board._board.flatten().tobytes() # get the hashable state
-
                 symmetries_set = set() # set of symmetries
 
                 for i in range(4):
@@ -183,7 +178,7 @@ class ReinforcementPlayer(Player):
                     symmetries_set.add(hashable_state_rotated)
                     symmetries_set.add(hashable_state_flipped)
 
-                counter = 1
+                # counter = 1
                 for hashable_state in symmetries_set:
                     actual_move_score = self.value_dictionary[hashable_state]
                     if actual_move_score == 0:
@@ -191,50 +186,11 @@ class ReinforcementPlayer(Player):
                     else:
                         never_visited = False
                         break
-                    if counter == len(symmetries_set):
-                        never_visited = False
-                    counter += 1
-
-                # for i in range (4):
-                #     board_to_hash_rotated = np.rot90(test_board._board, k=i) # rotate the board
-                #     board_to_hash_flipped = np.flip(board_to_hash_rotated)
-
-                #     hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state
-                #     hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes()
-
-                #     if hashable_state_rotated == hashable_state_flipped:
-                #         actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
-
-                #         if actual_move_score_rotated == 0:
-                #             del self.value_dictionary[hashable_state_rotated]
-                #         else:
-                #             never_visited = False
-                #             actual_move_score = actual_move_score_rotated
-                #             break
-                #     else:
-
-                #         actual_move_score_rotated = self.value_dictionary[hashable_state_rotated]
-                #         actual_move_score_flipped = self.value_dictionary[hashable_state_flipped]
-
-                #         if actual_move_score_rotated != 0 or actual_move_score_flipped != 0:
-                #             never_visited = False
-                #             if actual_move_score_rotated != 0:
-                #                 actual_move_score = actual_move_score_rotated
-                #                 del self.value_dictionary[hashable_state_flipped]
-                #                 break
-                #             else:
-                #                 actual_move_score = actual_move_score_flipped
-                #                 del self.value_dictionary[hashable_state_rotated]
-                #                 break
-                #         else:
-                #             del self.value_dictionary[hashable_state_rotated]
-                #             del self.value_dictionary[hashable_state_flipped]
-                        
+                    # if counter == len(symmetries_set):
+                    #     never_visited = False
+                    # counter += 1
                 
                 test_board._board = old_board.copy() # restore the old board after testing a move
-
-                # if actual_move_score == None: # if the state was never visited
-                #     actual_move_score = 0 # set the score to 0
 
                 if best_move is None or actual_move_score > best_move_score: # if the actual move score is better than the best move score
                     best_move_score = actual_move_score # update the best move score

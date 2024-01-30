@@ -303,3 +303,38 @@ Finished implementing the symmetry. Now I need to implement the mirroring.
 - [ ] To save some resources I can store the not-hashed version of the boards in the trajectory.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Applied the mirroring.
+There is some bugs, over 150k states, there are 200 symmetries, idk why
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+finished bug fixing, now it works.
+testing the size of the policy file with 10k episodes
+new size:       5MB
+new entries:    134297
+
+-------------------------
+old size:       8.5MB
+old entries:    137146
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+There's something wrong, I have no decreasing in the number of entries, it should be halved.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+With 3 rounds of 1kk training it works:
+Win rate player 1: 91.60000000000001%
+Lose rate player 1: 8.4%
+Draw rate: 0.0%
+Average trajectory size: 9.884
+Entries: 10238608
+Policy size: 356MB
+
+For the same win rate as before I got around:
+20 times less entries
+20 times less policy size
+2,5 times less training rounds to obtain the same win rate
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
