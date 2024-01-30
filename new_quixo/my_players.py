@@ -119,7 +119,7 @@ class HumanPlayer(Player):
         self.available_moves = test_board.compute_available_moves()
     
 class ReinforcementPlayer(Player):
-    def __init__(self, random_move = 0.9, learning_rate = 0.1, training = False):
+    def __init__(self, random_move = 0, learning_rate = 0.1, training = False):
         self.training = training # if we are training the model we need to update the trajectory
         self.value_dictionary = defaultdict(float) # state of the game and its value
         self.learning_rate = learning_rate # used in the reward distribution function
@@ -143,6 +143,7 @@ class ReinforcementPlayer(Player):
         if self.player_index is None: # if this is the first move of the player
             self.player_index = game.current_player_idx # set the index of the player
             if not self.training: # if we are not training the model
+                print("Loading policy...")
                 self.load_policy("policies/policy_" + str(self.player_index)) # load the policy file
 
         best_move_score = None # the best move score is initialized with a very low value

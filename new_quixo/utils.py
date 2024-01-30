@@ -75,10 +75,10 @@ class Utils:
 
         # when training finishes
         if player1_reinforcement:
-            player1.create_policy(policy_name + "_1")
+            player1.create_policy(policy_name + "_0")
             player1.training = False # set the training flag to false so it can be used for testing purposes
         if player2_reinforcement:
-            player2.create_policy(policy_name + "_2")
+            player2.create_policy(policy_name + "_1")
             player2.training = False
 
         if plot:
@@ -117,12 +117,12 @@ class Utils:
             old_random_move_1 = player1.random_move # save the old random move to restore it later
             player1.set_random_move(0) # set the random move to 0 to perform the test
             if not plot: # if we are not plotting the win rate we have to load the policy because this is the only time we use it
-                player1.load_policy(policy_name + "_1")
+                player1.load_policy(policy_name + "_0")
         if player2_reinforcement:
             old_random_move_2 = player2.random_move # save the old random move to restore it later
             player2.set_random_move(0) # set the random move to 0 to perform the test
             if not plot: # if we are not plotting the win rate we have to load the policy because this is the only time we use it
-                player2.load_policy(policy_name + "_2")
+                player2.load_policy(policy_name + "_1")
 
         for _ in range(games):
             game = Game()

@@ -344,6 +344,12 @@ Lose rate player 1: 8.0%
 Entries: 11639934
 policy size: 430MB
 
++1kk train episodes on player_1:
+Win rate player 1: 93.4%
+Lose rate player 1: 6.6000000000000005%
+Entries: 13477063
+policy size: 498MB
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1kk train episodes on player_2:
@@ -352,6 +358,12 @@ Lose rate player 2: 14.899999999999999%
 Average trajectory size: 5.0
 Entries: 4380294
 Policy size: 162MB
+
++1kk train episodes on player_2:
+Win rate player 2: 87.9%
+Lose rate player 2: 12.1%
+Entries: 7404710
+policy size: 274MB
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 
