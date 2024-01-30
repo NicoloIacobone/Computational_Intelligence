@@ -327,7 +327,6 @@ There's something wrong, I have no decreasing in the number of entries, it shoul
 With 3 rounds of 1kk training it works:
 Win rate player 1: 91.60000000000001%
 Lose rate player 1: 8.4%
-Draw rate: 0.0%
 Average trajectory size: 9.884
 Entries: 10238608
 Policy size: 356MB
@@ -338,3 +337,25 @@ For the same win rate as before I got around:
 2,5 times less training rounds to obtain the same win rate
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
++1kk train episodes on player_1:
+Win rate player 1: 92.0%
+Lose rate player 1: 8.0%
+Entries: 11639934
+policy size: 430MB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1kk train episodes on player_2:
+Win rate player 2: 85.1%
+Lose rate player 2: 14.899999999999999%
+Average trajectory size: 5.0
+Entries: 4380294
+Policy size: 162MB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Comment all the lines in all files:
+- [X] utils.py
+- [X] my_players.py
+- [X] my_game.py

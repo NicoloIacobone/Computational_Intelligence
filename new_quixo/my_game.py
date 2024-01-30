@@ -14,13 +14,13 @@ class MyGame(Game):
         '''Prints the board. -1 are neutral pieces, 0 are pieces of player 0, 1 pieces of player 1'''
         board_str = ""
 
-        for row in self._board:
-            for cell in row:
-                if cell == -1:
+        for row in self._board: # for each row
+            for cell in row: # for each column
+                if cell == -1: # if the cell is neutral
                     board_str += '⬜️ '
-                elif cell == 0:
+                elif cell == 0: # if the cell is a piece of player 0
                     board_str += '❌ '
-                else:
+                else: # if the cell is a piece of player 1
                     board_str += '⭕️ '
 
             board_str += '\n'
