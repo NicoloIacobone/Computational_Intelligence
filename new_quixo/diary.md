@@ -395,3 +395,58 @@ Old size:                   5MB
 Old entries:                134297
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+I started the training during the night, every million training matches it should've taken 7 hours but in the morning, after 7hr45mins it had only made 383k training matches. I attach the results:
+
+Win rate player 1: 85.5%
+Lose rate player 1: 14.499999999999998%
+Average trajectory size: 11.458
+Entries: 2321057
+Policy size: 18MB
+
++100k training matches:
+Win rate player 1: 86.9%
+Lose rate player 1: 13.100000000000001%
+Average trajectory size: 11.077
+Entries: 4762877
+Policy size: 35MB
+
++50k training matches:
+Win rate player 1: 89.0%
+Lose rate player 1: 11.0%
+Average trajectory size: 10.686
+Entries: 5025361
+Policy size: 37,8MB
+
+---------------------------------------------
+Win rate player 2: 80.7%
+Lose rate player 2: 19.3%
+Average trajectory size: 12.927
+Entries: 2623850
+Policy size: 20MB
+
++100k training matches:
+Win rate player 2: 82.5%
+Lose rate player 2: 17.5%
+Average trajectory size: 11.845
+Entries: 4908261
+Policy size: 37,6MB
+
++200k training matches:
+Win rate player 2: 83.2%
+Lose rate player 2: 16.8%
+Average trajectory size: 16.0
+Enries: 7367171
+Policy size: 56,6MB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+On average:
+Entries per MB before: 27k
+Entries per MB after:  130k
+
+It is 4.8 times better.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+To divide the policy file I can separately store the keys and the values, and then load them separately.

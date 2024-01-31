@@ -2,12 +2,12 @@
 from game import Game, Move, Player
 from my_game import MyGame
 from collections import defaultdict
+
 import random
 import pickle
 import os
 import numpy as np
 import tkinter as tk
-from hashing_functions import my_hash, my_undo_hash
 import gzip
 
 class HumanPlayer(Player):
@@ -171,11 +171,11 @@ class ReinforcementPlayer(Player):
                     board_to_hash_rotated = np.rot90(test_board._board, k=i) # rotate the board
                     board_to_hash_flipped = np.flip(board_to_hash_rotated, axis=0) # flip the rotated board
 
-                    # hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
-                    # hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
+                    hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
+                    hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
 
-                    hashable_state_rotated = my_hash(board_to_hash_rotated) # get the hashable state of the rotated state
-                    hashable_state_flipped = my_hash(board_to_hash_flipped)
+                    # hashable_state_rotated = my_hash(board_to_hash_rotated) # get the hashable state of the rotated state
+                    # hashable_state_flipped = my_hash(board_to_hash_flipped)
 
                     symmetries_set.add(hashable_state_rotated) # add the two states to the set
                     symmetries_set.add(hashable_state_flipped)
@@ -212,8 +212,8 @@ class ReinforcementPlayer(Player):
         test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
         # hashable_state = np.array2string(test_board._board.flatten(), separator = '') # get the hashable state
         # hashable_state = tuple(test_board._board.flatten()) # get the hashable state (use the board as key)
-        # hashable_state = test_board._board.astype(np.int8).flatten().tobytes() # get the hashable state (use the board as key)
-        hashable_state = my_hash(test_board._board)
+        hashable_state = test_board._board.astype(np.int8).flatten().tobytes() # get the hashable state (use the board as key)
+        # hashable_state = my_hash(test_board._board.copy())
         self.trajectory.append(hashable_state) # add the state to the trajectory
 
     def give_reward(self, reward, suicide: bool = False):
@@ -224,8 +224,8 @@ class ReinforcementPlayer(Player):
 
             if reward > 0 or suicide: # if we have to assign a huge reward to only one value (win state or suicide state)
                 state_to_check = self.trajectory[-1] # already hashed
-                # original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5) # need to be restored to rotate and flip
-                original_state = my_undo_hash(state_to_check)
+                original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5) # need to be restored to rotate and flip
+                # original_state = my_undo_hash(state_to_check)
 
                 symmetries_set_suicide = set() # create the set to save the symmetries
 
@@ -233,11 +233,11 @@ class ReinforcementPlayer(Player):
                     state_rotated = np.rot90(original_state, k = i) # rotate the board
                     state_flipped = np.flip(state_rotated, axis = 0) # flip the rotated board
 
-                    # hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
-                    # hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
+                    hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
+                    hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
 
-                    hashed_state_rotated = my_hash(state_rotated)
-                    hashed_state_flipped = my_hash(state_flipped)
+                    # hashed_state_rotated = my_hash(state_rotated)
+                    # hashed_state_flipped = my_hash(state_flipped)
 
                     symmetries_set_suicide.add(hashed_state_rotated) # add the two states to the set
                     symmetries_set_suicide.add(hashed_state_flipped)
@@ -258,18 +258,20 @@ class ReinforcementPlayer(Player):
             if not suicide: # if we have to assign the reward with backpropagation
                 for state in reversed(self.trajectory): # for each visited state in reversed order
                     symmetries_set_not_suicide = set() # create the set to store the symmetries
+
+                    original_state = np.frombuffer(state, dtype=np.int8).reshape(5, 5) # obtain the original array
+                    # original_state = my_undo_hash(state)
                     for i in range(4): # for the four possible rotations
-                        # original_state = np.frombuffer(state, dtype=np.int8).reshape(5, 5) # obtain the original array
-                        original_state = my_undo_hash(state)
+                        
 
                         state_rotated = np.rot90(original_state, k = i) # rotate it
                         state_flipped = np.flip(state_rotated, axis = 0) # flip the rotated state
 
-                        # hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
-                        # hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
+                        hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
+                        hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
 
-                        hashed_state_rotated = my_hash(state_rotated)
-                        hashed_state_flipped = my_hash(state_flipped)
+                        # hashed_state_rotated = my_hash(state_rotated)
+                        # hashed_state_flipped = my_hash(state_flipped)
 
                         symmetries_set_not_suicide.add(hashed_state_rotated) # add the two symmetries to the set
                         symmetries_set_not_suicide.add(hashed_state_flipped)

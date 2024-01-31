@@ -1,10 +1,9 @@
 ''' In this class are defined some useful functions: Train, Test, Evaluate '''
 from game import Game, Player
-from my_game import MyGame
 from my_players import ReinforcementPlayer
 from tqdm import tqdm
+
 import matplotlib.pyplot as plt
-from math import ceil
 
 class Utils:
     def __init__(self) -> None:
