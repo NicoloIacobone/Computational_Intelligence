@@ -371,3 +371,27 @@ Comment all the lines in all files:
 - [X] utils.py
 - [X] my_players.py
 - [X] my_game.py
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+GitHub only allows to upload files up to 100MB. I thought to link the policy file from Google Drive, but the teacher said it's not a good idea. I need to find a way to let the policy file smaller.
+
+Maybe it is possible to hash the states using less than 25*8its per board.
+
+The board has 25 values that can be -1, 0, 1. I can use 2 bits for each value, so I can use 50 bits instead of 200 bits.
+
+Hashing the board after mapping the values in their "binary" representation halved the size of the policy file, but also halved the execution speed.
+
+It is also possible to compress the policy file using the gzip library.
+
+After compressing with gzip, the policy file is less than 1MB. Trying to compress the original file of 500MB, it becomes 130MB. I will use this approach.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+New size (gziz + new_hash): 971kb
+New entries:                133009
+
+Old size:                   5MB
+Old entries:                134297
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
