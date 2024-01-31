@@ -32,13 +32,18 @@ if __name__ == '__main__':
     players = [reinforcement_player, minimax_player, human_player, random_player]
     player_names = ["Reinforcement", "Minimax", "Human", "Random"]
 
-    player_1 = int(input("Select player 1 (X):\n0 - Reinforcement\n1 - Minimax\n2 - Human\n3 - Random\n"))
-    player_2 = int(input("\nSelect player 2 (O):\n0 - Reinforcement\n1 - Minimax\n2 - Human\n3 - Random\n"))
+    # player_1 = int(input("Select player 1 (X):\n0 - Reinforcement\n1 - Minimax\n2 - Human\n3 - Random\n"))
+    # player_2 = int(input("\nSelect player 2 (O):\n0 - Reinforcement\n1 - Minimax\n2 - Human\n3 - Random\n"))
 
-    game = Game()
-    winner = game.play(players[player_1], players[player_2])
+    # game = Game()
+    # winner = game.play(players[player_1], players[player_2])
 
-    if winner == 0:
-        print(f"{player_names[player_1]} player X won!")
-    elif winner == 1:
-        print(f"{player_names[player_2]} player O won!")
+    # if winner == 0:
+    #     print(f"{player_names[player_1]} player X won!")
+    # elif winner == 1:
+    #     print(f"{player_names[player_2]} player O won!")
+
+    environment = Utils()
+
+    environment.test(reinforcement_player, random_player)
+    environment.test(minimax_player, random_player, 100)

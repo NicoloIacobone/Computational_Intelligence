@@ -147,6 +147,7 @@ class ReinforcementPlayer(Player):
             if not self.training: # if we are not training the model
                 print("Loading policy...")
                 self.load_policy("policies/policy_" + str(self.player_index)) # load the policy file
+                print("Policy loaded!")
 
         best_move_score = None # the best move score is initialized with a very low value
         best_move = None # the best move is initialized with None
@@ -162,8 +163,6 @@ class ReinforcementPlayer(Player):
             for move in self.available_moves: # for each possible move
                 from_pos, slide = move # get the move
                 _ = test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
-                # hashable_state = np.array2string(game._board.flatten(), separator = '')
-                # hashable_state = tuple(game._board.flatten()) # get the hashable state (use the board as key)
 
                 symmetries_set = set() # set of symmetries
 
@@ -173,9 +172,6 @@ class ReinforcementPlayer(Player):
 
                     hashable_state_rotated = board_to_hash_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
                     hashable_state_flipped = board_to_hash_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
-
-                    # hashable_state_rotated = my_hash(board_to_hash_rotated) # get the hashable state of the rotated state
-                    # hashable_state_flipped = my_hash(board_to_hash_flipped)
 
                     symmetries_set.add(hashable_state_rotated) # add the two states to the set
                     symmetries_set.add(hashable_state_flipped)
@@ -210,10 +206,7 @@ class ReinforcementPlayer(Player):
         if np.count_nonzero(test_board._board == -1) == 25 or np.count_nonzero(test_board._board == -1) == 24:
             self.trajectory = [] # reset the trajectory
         test_board._Game__move(from_pos, slide, test_board.current_player_idx) # apply the move
-        # hashable_state = np.array2string(test_board._board.flatten(), separator = '') # get the hashable state
-        # hashable_state = tuple(test_board._board.flatten()) # get the hashable state (use the board as key)
         hashable_state = test_board._board.astype(np.int8).flatten().tobytes() # get the hashable state (use the board as key)
-        # hashable_state = my_hash(test_board._board.copy())
         self.trajectory.append(hashable_state) # add the state to the trajectory
 
     def give_reward(self, reward, suicide: bool = False):
@@ -225,7 +218,6 @@ class ReinforcementPlayer(Player):
             if reward > 0 or suicide: # if we have to assign a huge reward to only one value (win state or suicide state)
                 state_to_check = self.trajectory[-1] # already hashed
                 original_state = np.frombuffer(state_to_check, dtype=np.int8).reshape(5, 5) # need to be restored to rotate and flip
-                # original_state = my_undo_hash(state_to_check)
 
                 symmetries_set_suicide = set() # create the set to save the symmetries
 
@@ -235,9 +227,6 @@ class ReinforcementPlayer(Player):
 
                     hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # get the hashable state of the rotated state
                     hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes() # get the hashable state of the flipped state
-
-                    # hashed_state_rotated = my_hash(state_rotated)
-                    # hashed_state_flipped = my_hash(state_flipped)
 
                     symmetries_set_suicide.add(hashed_state_rotated) # add the two states to the set
                     symmetries_set_suicide.add(hashed_state_flipped)
@@ -269,9 +258,6 @@ class ReinforcementPlayer(Player):
 
                         hashed_state_rotated = state_rotated.astype(np.int8).flatten().tobytes() # hash it again (otherwise it doesn't work as key for defaultdict)
                         hashed_state_flipped = state_flipped.astype(np.int8).flatten().tobytes()
-
-                        # hashed_state_rotated = my_hash(state_rotated)
-                        # hashed_state_flipped = my_hash(state_flipped)
 
                         symmetries_set_not_suicide.add(hashed_state_rotated) # add the two symmetries to the set
                         symmetries_set_not_suicide.add(hashed_state_flipped)
@@ -315,13 +301,25 @@ class ReinforcementPlayer(Player):
         
     def create_policy(self, policy_file):
         """Creates the policy file with gzip compression"""
-        with gzip.open(policy_file, 'wb') as fw:
-            pickle.dump(self.value_dictionary, fw)
+        keys = list(self.value_dictionary.keys())
+        values = list(self.value_dictionary.values())
+
+        with gzip.open(policy_file + "_keys", 'wb') as fw:
+            pickle.dump(keys, fw)
+
+        with gzip.open(policy_file + "_values", 'wb') as fw:
+            pickle.dump(values, fw)
 
     def load_policy(self, policy_file):
         """Loads the policy file with gzip decompression"""
-        with gzip.open(policy_file, 'rb') as fr:
-            self.value_dictionary = pickle.load(fr)
+        with gzip.open(policy_file + "_keys", 'rb') as fr:
+            keys = pickle.load(fr)
+
+        with gzip.open(policy_file + "_values", 'rb') as fr:
+            values = pickle.load(fr)
+
+        # self.value_dictionary = dict(zip(keys, values))
+        self.value_dictionary = defaultdict(float, zip(keys, values))
 
     # gets the policy size
     def get_policy_size(self, policy_file):

@@ -1,6 +1,6 @@
 ''' In this class are defined some useful functions: Train, Test, Evaluate '''
 from game import Game, Player
-from my_players import ReinforcementPlayer
+from my_players import ReinforcementPlayer, MinimaxPlayer
 from tqdm import tqdm
 
 import matplotlib.pyplot as plt
@@ -123,7 +123,7 @@ class Utils:
             if not plot: # if we are not plotting the win rate we have to load the policy because this is the only time we use it
                 player2.load_policy(policy_name + "_1")
 
-        for _ in range(games):
+        for _ in tqdm(range(games)):
             game = Game()
             win = game.play(player1, player2) # play the game
             if win == 0: # if player 1 won
@@ -146,17 +146,17 @@ class Utils:
                 player2.set_random_move(old_random_move_2) # restore the old random move
             return win_rate_player_1 / games * 100 # return the win rate
 
-        if player1_reinforcement:
+        if player1_reinforcement or isinstance(player1, MinimaxPlayer):
             print(f"Win rate player 1: {win_rate_player_1 / games * 100}%") # print the win rate
             print(f"Lose rate player 1: {lose_rate_player_1 / games * 100}%") # print the lose rate
-            print(f"Draw rate: {draw_rate / games * 100}%") # print the draw rate
-            print(f"Average trajectory size: {trajectory_size_1 / games}") # print the average trajectory size
+            if player1_reinforcement:
+                print(f"Average trajectory size: {trajectory_size_1 / games}") # print the average trajectory size
             print("---------------------------------------------") # print a separator
-        if player2_reinforcement:
+        if player2_reinforcement or isinstance(player2, MinimaxPlayer):
             print(f"Win rate player 2: {win_rate_player_2 / games * 100}%")
             print(f"Lose rate player 2: {lose_rate_player_2 / games * 100}%")
-            print(f"Draw rate: {draw_rate / games * 100}%")
-            print(f"Average trajectory size: {trajectory_size_2 / games}")
+            if player2_reinforcement:
+                print(f"Average trajectory size: {trajectory_size_2 / games}")
             print("---------------------------------------------")
 
     def evaluate_player(self, player_to_evaluate: ReinforcementPlayer, policy = None):
@@ -170,5 +170,5 @@ class Utils:
             if policy_size >= 1_000_000_000:
                 print(f"Policy size: {policy_size/1_000_000_000:.2f} GB") # print the size of the policy in GB
             else:
-                print(f"Policy size: {policy_size/1_000_000_000:.2f} GB") # print the size of the policy in MB
+                print(f"Policy size: {policy_size/1_000_000_000:.2f} MB") # print the size of the policy in MB
             
